@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Renkler */
+
+        :root {
+            --primary-color: #d5def5;
+            --secondary-color: #4f64d1;
+            --tertiary-color: #6643b5;
+            --fourth-color: #581474;
+            --dark-color: rgb(66, 61, 61);
+            --bright-color: #dddddd;
+        }
+
+        /* Genel Stil */
+
+        /* Ebeveyn kutu */
+
+        .buyuk {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        /* Alttaki .kutu kutuları */
+
+        .buyuk .kutu {
+            width: calc(75% / 2);
+            margin: 5px;
+            background-color: var(--primary-color);
+            border: 1px solid var(--dark-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            float: left;
+        }
+
+        h2 {
+            color: var(--dark-color);
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--secondary-color);
+                color: var(--bright-color);
+            }
+        }
+
+        i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+        }
+
+        /* İletişim Formu */
+
+        form {
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 95%;
+            resize: none;
+            overflow: auto;
+            padding: 10px;
+            border: 1px solid var(--dark-color);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: var(--bright-color);
+            border: 1px solid var(--dark-color);
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                background-color: var(--tertiary-color);
+            }
+        }
+
+        /* Animasyonlar */
+
+        .kutu:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ek Özellikler */
+
+        /* Burada istediğiniz ek özellikleri ekleyebilirsiniz. */
+    </style>
+</head>
+
+<body>
+
+    <div class="buyuk">
+        <div class="kutu" id="İletişim">
+            <h2>İletişim</h2>
+            <ul>
+                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li><i class="fa fa-phone"></i> +90 555 555 55 55</li>
+                <li><i class="fa fa-map-marker"></i> Adresiniz</li>
+                <li><i class="fa fa-facebook"></i> Facebook Sayfanız</li>
+                <li><i class="fa fa-twitter"></i> Twitter Hesabınız</li>
+                <li><i class="fa fa-instagram"></i> Instagram Hesabınız</li>
+            </ul>
+            <form action="/iletisim-formu" method="post">
+                <input type="text" name="isim" placeholder="Adınız Soyadınız">
+                <input type="email" name="eposta" placeholder="E-posta Adresiniz">
+                <textarea name="mesaj" placeholder="Mesajınız"></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+        <div class="kutu" id="İletişim">
+            <h2>İletişim</h2>
+            <ul>
+                <li><i class="fa fa-envelope"></i> info@example.com</li>
+                <li><i class="fa fa-phone"></i> +90 555 555 55 55</li>
+                <li><i class="fa fa-map-marker"></i> Adresiniz</li>
+                <li><i class="fa fa-facebook"></i> Facebook Sayfanız</li>
+                <li><i class="fa fa-twitter"></i> Twitter Hesabınız</li>
+                <li><i class="fa fa-instagram"></i> Instagram Hesabınız</li>
+            </ul>
+            <form action="/iletisim-formu" method="post">
+                <input type="text" name="isim" placeholder="Adınız Soyadınız">
+                <input type="email" name="eposta" placeholder="E-posta Adresiniz">
+                <textarea name="mesaj" placeholder="Mesajınız"></textarea>
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

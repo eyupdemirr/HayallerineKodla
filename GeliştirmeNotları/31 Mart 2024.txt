@@ -1,0 +1,4 @@
+Ai Recommandation System'i pyhon ile geliştireceğiz.
+Python'ı Web sitesinde çalıştırabilmek için JS kütüphanesi kullanacağız. PyScript, Google Gemini'de Hayallerine Kodla Yardım altında notları var.
+
+İletişim ekranı tasarımı güncellenecek. Ve bilgiler ile doldurulacak. Form DB'ye bağlanacak.
