@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yol-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            width: 300px;
+            margin: 10px;
+            border-radius: 7px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .baslik {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            background-color: #ddd;
+        }
+
+        .adimlar {
+            display: none;
+            padding: 10px;
+        }
+
+        .card:hover .adimlar {
+            display: block;
+            height: 70%;
+        }
+
+        .adimlar-kutusu {
+            margin: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="yol-container">
+        <div class="card">
+            <div class="baslik">Frontend</div>
+            <div class="adimlar">
+                <div class="adimlar-kutusu"><a href="#">HTML</a></div>
+                <div class="adimlar-kutusu"><a href="#">CSS</a></div>
+                <div class="adimlar-kutusu"><a href="#">JavaScript</a></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="baslik">Backend</div>
+            <div class="adimlar">
+                <div class="adimlar-kutusu">Java</div>
+                <div class="adimlar-kutusu">C#</div>
+                <div class="adimlar-kutusu">PHP</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="baslik">DataBase</div>
+            <div class="adimlar">
+                <div class="adimlar-kutusu">Excel</div>
+                <div class="adimlar-kutusu">SQL</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="baslik">UI/UX Design</div>
+            <div class="adimlar">
+                <div class="adimlar-kutusu">...</div>
+                <div class="adimlar-kutusu">...</div>
+                <div class="adimlar-kutusu">...</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .kutuCard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        .kutuCard .card {
+            margin: 10px;
+        }
+
+        .card {
+            width: 300px;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+            float: left;
+        }
+
+        .front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: #fff;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .front h2 {
+            text-align: center;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: black;
+        }
+
+        .back {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: 70%;
+            background-color: #ddd;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+            padding: 5px;
+            margin: 0 auto;
+            color: black;
+        }
+
+        .card:hover .back {
+            opacity: 1;
+        }
+
+        .title {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .description {
+            padding: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kutuCard">
+        <div class="card">
+            <div class="front">
+                <h2>HTML</h2>
+            </div>
+            <div class="back">
+                <p>Bir işaret dilidir ve frontend alanının temelidir. Web sayfalarında her etiket bir kutudur ve tüm
+                    kutular temelde bir HTML etiketidir.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h2>CSS</h2>
+            </div>
+            <div class="back">
+                <p>Bir tasarım dilidir. HTML etiketlerinin göze hoş gelmesini sağlayan ve basitten moderne tüm görsel
+                    tasarımlara imkan tanıyan dildir.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="back">
+                <p>Web Geliştirmeleri için vazgeçilmezdir. Hem Frontend hemde backend geliştirmeleri için kullanılabilir
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="back">
+                <p>Web Geliştirmeleri için vazgeçilmezdir. Hem Frontend hemde backend geliştirmeleri için kullanılabilir
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="back">
+                <p>Web Geliştirmeleri için vazgeçilmezdir. Hem Frontend hemde backend geliştirmeleri için kullanılabilir
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="front">
+                <h2>JavaScript</h2>
+            </div>
+            <div class="back">
+                <p>Web Geliştirmeleri için vazgeçilmezdir. Hem Frontend hemde backend geliştirmeleri için kullanılabilir
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

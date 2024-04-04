@@ -60,3 +60,23 @@ yukariGitButonu.addEventListener("click", function() {
     behavior: "smooth"
   });
 });
+
+
+const ekran1 = document.querySelector("#ekran1");
+const ekran2 = document.querySelector("#ekran2");
+const icerik1 = document.querySelector("#ekran1-icerik");
+const icerik2 = document.querySelector("#ekran2-icerik");
+
+ekran1.addEventListener("click", () => {
+  ekran1.classList.add("active");
+  ekran2.classList.remove("active");
+  icerik1.classList.add("active");
+  icerik2.classList.remove("active");
+});
+
+ekran2.addEventListener("click", () => {
+  ekran1.classList.remove("active");
+  ekran2.classList.add("active");
+  icerik1.classList.remove("active");
+  icerik2.classList.add("active");
+});

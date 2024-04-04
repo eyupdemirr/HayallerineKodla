@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="tr-TR">
+<html lang="tr-TR" onload="/Frontend/login.html">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hayalleri Kodla</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
     <meta name="description"
         content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
     <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
@@ -13,7 +16,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -34,46 +36,38 @@
             <a href="menu.html" id="menu-button"><img src="asset/bars-solid.svg"></a>
             <div id="kutu">
                 <h1>HAYALLERİNE KODLA</h1>
-                <h2>Hoşgeldiniz, henüz üye olmadınız mı? Hemen <a href="#UyeOl.html" target="_blank"
+                <h2>Hoşgeldiniz, henüz üye olmadınız mı? Hemen <a href="login.html#kayit-ol-icerik" target="_blank"
                         rel="noopener noreferrer" id="UyeOl">Üye Olun</a> ve ayrıcalıkların tadını çıkarın</h2>
             </div>
         </div>
-        <div class="kutu" id="Egitimler">
-            <div class="kutu" id="Egitimler">
+        <div class="kutu">
+            <div id="Egitimler">
                 <h2>Eğitimler ve Alıştırmalar</h2>
-                <div class="yol-container">
-                    <div class="yol">
-                        <div class="baslik">Frontend</div>
-                        <div class="adimlar">
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                        </div>
-                    </div>
-                    <div class="yol">
-                        <div class="baslik">Backend</div>
-                        <div class="adimlar">
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                        </div>
-                    </div>
-                    <div class="yol">
-                        <div class="baslik">DataBase</div>
-                        <div class="adimlar">
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                        </div>
-                    </div>
-                    <div class="yol">
-                        <div class="baslik">UI/UX Design</div>
-                        <div class="adimlar">
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                            <div class="adimlar-kutusu">...</div>
-                        </div>
-                    </div>
+                <div class="secenek">
+                    <a href="#" id="ekran1" class="secenek-link active">Ekran 1</a>
+                    <a href="#" id="ekran2" class="secenek-link">Ekran 2</a>
+                </div>
+                <div id="ekran1-icerik" class="icerik active">
+                    <p>Ekran 1 içeriği...</p>
+                    <div id="egitim-kutulari"></div>
+                    <script>
+                        fetch("/Frontend/Eğitimler/egitimKutulari.html")
+                            .then(response => response.text())
+                            .then(html => {
+                                document.getElementById("egitim-kutulari").innerHTML = html;
+                            });
+                    </script>
+                </div>
+                <div id="ekran2-icerik" class="icerik">
+                    <p>Ekran 2 içeriği...</p>
+                    <div id="egitim-yol-kutulari"></div>
+                    <script>
+                        fetch("/Frontend/Eğitimler/egitimYolKutulari.html")
+                            .then(response => response.text())
+                            .then(html => {
+                                document.getElementById("egitim-yol-kutulari").innerHTML = html;
+                            });
+                    </script>
                 </div>
             </div>
 

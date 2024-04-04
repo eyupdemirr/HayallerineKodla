@@ -183,42 +183,40 @@
     justify-content: space-around;
 }
 
-.yol {
-    width: 300px;
-    margin: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-.baslik {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.adimlar {
+.secenek {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 99%;
+    background-color: gray;
 }
 
-.adimlar-kutusu {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
+.secenek a {
+    width: 50%;
     text-align: center;
-    width: 250px;
-    border-radius: 3px;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.cizgi {
-    border-left: 1px solid #ddd;
-    height: 100%;
-    margin: 0 10px;
+.secenek a.active {
+    background-color: green;
+}
+
+/* Ekran İçerikleri */
+.icerik {
+    display: none;
+}
+
+.icerik.active {
+    display: block;
+    width: 100%;
 }
 
 /*Hayallerine Kodla Asistanı*/
+#Asistan {
+    background-color: var(--primary-color);
+}
+
 
 /*İletişiim*/
 #İletisim {

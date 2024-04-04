@@ -1,0 +1,15 @@
+
+Yapılanlar:
+- login.html eklendi
+- Giriş ve Kayıt ekranları login.html içinde düzenlendi
+- eğitimler listesi için ek klasör oluşturuldu.
+- eğtim liste alanında eğitim kutularını gösterebilmek için fetch kullanıldı
+- eğitimler kutusu index içinde ikiye bölündü. ilgili ekranlar fetch ile dış dosyalardan çekildi.
+- 
+
+Yapılacaklar:
+- eğitim listelerinde tasarım düzeltilecek
+- Kullanıcı bilgilerini ve Eğitim bilgilerini içeren 2 tablolu bir db oluşturulacak.
+- giriş ekranı db'ye bağlanacak.
+- Backend işlemleri için PHP entegre edilecek. Gerekli kodlar yazılacak.
+- 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş/Kayıt Sayfası</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d5def5;
+            --secondary-color: #00168b;
+            --tertiary-color: #6643b5;
+            --fourth-color: #581474;
+            --dark-color: rgb(66, 61, 61);
+            --bright-color: #dddddd;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            width: 400px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid var(--bright-color);
+        }
+
+        .header a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .header a.active {
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid var(--bright-color);
+            border-radius: 5px;
+        }
+
+        .content button {
+            width: 100%;
+            padding: 10px;
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #kayit-ol-icerik {
+            display: none;
+        }
+
+        .cinsiyet {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .cinsiyet label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="header">
+                <a href="#" id="giris-yap" class="active">Giriş Yap</a>
+                <a href="#" id="kayit-ol">Kayıt Ol</a>
+            </div>
+            <div class="content">
+                <div id="giris-yap-icerik">
+                    <input type="text" placeholder="Kullanıcı Adı" required>
+                    <input type="password" placeholder="Şifre" required>
+                    <button type="submit">Giriş Yap</button>
+                </div>
+
+                <div id="kayit-ol-icerik">
+                    <input type="text" placeholder="Adınız" id="ad" required>
+                    <input type="text" placeholder="Soyadınız" id="soyad" required>
+                    <input type="text" placeholder="Kullanıcı Adı" id="kullanici-adi" required>
+                    <input type="password" placeholder="Şifre" id="sifre" required>
+                    <input type="date" placeholder="Doğum Tarihi" id="dogum-tarihi" required>
+                    <div class="cinsiyet">
+                        <label for="erkek">Erkek</label>
+                        <input type="radio" name="cinsiyet" id="erkek" value="erkek">
+                        <label for="kadin">Kadın</label>
+                        <input type="radio" name="cinsiyet" id="kadin" value="kadin">
+                    </div>
+                    <button type="submit">Kayıt Ol</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const girisYap = document.getElementById("giris-yap");
+        const kayitOl = document.getElementById("kayit-ol");
+        const girisYapIcerik = document.getElementById("giris-yap-icerik");
+        const kayitOlIcerik = document.getElementById("kayit-ol-icerik");
+
+        kayitOl.addEventListener("click", () => {
+            girisYap.classList.remove("active");
+            kayitOl.classList.add("active");
+            girisYapIcerik.style.display = "none";
+            kayitOlIcerik.style.display = "block";
+        });
+
+        girisYap.addEventListener("click", () => {
+            kayitOl.classList.remove("active");
+            girisYap.classList.add("active");
+            kayitOlIcerik.style.display = "none";
+            girisYapIcerik.style.display = "block";
+        });
+    </script>
+
+</body>
+
+</html>
