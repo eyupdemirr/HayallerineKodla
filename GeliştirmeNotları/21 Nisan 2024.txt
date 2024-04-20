@@ -1,0 +1,16 @@
+Yapılanlar
+- Egitimler klasörü eklendi
+- C# ilk 5 eğitim eklendi
+- Sayfalar arası geçiş için link atamaları yapıldı
+- Proje içi Dosya düzenlemesi yapıldı
+
+Yapılacaklar
+- C# eğitimleri eklemesine devam edilecek.
+- Diğer eğitimlerin eklemelerine başlanacak.
+- Eğitimlerde alıştırma kısımlarına ilgili profil girişli alıştırmalar eklenecek.
+- İlgili veritabanı bağlantıları yapılacak.
+- Üye kayıt ve giriş ekranları db'ye bağlanacak.
+- Önceki geliştirme eksikleri giderilecek. 
+- AI Geliştirmelerine başlanacak. 
+- AI Recommandation System Profil girişlilere özel hale getirilecek.
+- proje Anasayfası ilgili geliştirmeler doğrultusunda güncellenecek. 
