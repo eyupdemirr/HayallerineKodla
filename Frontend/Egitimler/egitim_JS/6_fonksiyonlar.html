@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Fonksiyonlar</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_JavaScript_Nedir.html">JavaScript Nedir?</a>
+                <a href="2_degiskenlerVeriler.html">Değişkenler ve Veri Türleri</a>
+                <a href="3_operatorler.html">Operatörler</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_dom.html">DOM</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Fonksiyonlar</h3>
+                <p>
+                    Hayal edin, bir kutunuz var ve bu kutuya "Merhaba Dünya!" yazdırmak için bir talimat vermek
+                    istiyorsunuz. Bu talimatı kutuya kaydedip, her zaman aynı sonucu alacak şekilde kullanabilirsiniz.
+                    İşte fonksiyonlar tam olarak bu işe yarar!
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <pre>
+
+        // Merhaba Dünya! mesajını yazdıran bir fonksiyon oluşturalım
+        function merhabaDunya() {
+          console.log("Merhaba Dünya!");
+        }
+
+        // Fonksiyonumuzu çağıralım 
+        merhabaDunya(); 
+        
+        // Çıktı: Merhaba Dünya!
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>
+                            Fonksiyon Parametreleri:
+                        </h4>
+                        <br>
+                        <p>
+                            Fonksiyonlar, farklı değerler alarak çalışabilir. Bu değerleri fonksiyon parametreleri
+                            olarak tanımlayabiliriz.
+                        </p>
+                        <pre>
+
+        // Bir sayıya toplama işlemi yapan bir fonksiyon oluşturalım
+        function toplama(sayi1, sayi2) {
+          var toplam = sayi1 + sayi2;
+          return toplam;
+        }
+
+        // Fonksiyonumuzu çağıralım ve sonucu değişkene atayalım
+        var sonuc = toplama(5, 3);
+        console.log("Sonuç: " + sonuc); // Çıktı: Sonuç: 8
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>
+                            Fonksiyon Dönüş Değerleri:
+                        </h4>
+                        <br>
+                        <p>
+                            Fonksiyonlar, işlem sonucunda bir değer döndürebilir. Bu değeri return anahtar kelimesi ile
+                            belirtiriz.
+                        </p>
+                        <pre>
+
+        // Bir metni büyük harfe çeviren bir fonksoluşturalım
+        function buyukHarfeCevir(metin) {
+          return metin.toUpperCase();
+        }
+        
+        // Fonksiyonumuzu çağıralım ve sonucu değişkene atayalım
+        var buyukMetin = buyukHarfeCevir("Merhaba");
+        console.log("Büyük Metin: " + buyukMetin); // ÇıBüyük Metin MERHABA                            
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="ekranEgitim-alt-konu">
+                    <h4>
+                        Fonksiyon Türleri:
+                    </h4>
+                    <br>
+                    <p>
+                        Fonksiyonlar, tanımlanma şekillerine göre farklı türlere ayrılabilir.
+                    </p>
+                    <ul>
+                        <li><b>Bildirimli Fonksiyonlar:</b> function anahtar kelimesi ile bildirilir.</li>
+                        <li><b>İfade Fonksiyonları:</b> => operatörü ile kısaltılmış şekilde bildirilir.</li>
+                    </ul>
+                    <pre>
+
+        // Bildirimli fonksiyon
+        function carpma(x, y) {
+          return x * y;
+        }
+
+        // İfade fonksiyonu
+        var carpma = (x, y) => x * y;
+
+        // Fonksiyonları çağıralım
+        var sonuc1 = carpma(10, 2);
+        var sonuc2 = carpma(5, 4);
+
+        console.log("Sonuç 1: " + sonuc1); // Çıktı: Sonuç 1: 20
+        console.log("Sonuç 2: " + sonuc2); // Çıktı: Sonuç 2: 20
+                        </pre>
+                </div>
+
+                <div class="ekranEgitim-alt-konu">
+                    <h4>
+                        Fonksiyon Kapsamı:
+                    </h4>
+                    <br>
+                    <p>
+                        Fonksiyonlar kendi kapsamlarına sahiptir. Fonksiyon içinde tanımlanan değişkenler, sadece o
+                        fonksiyonda erişilebilir.
+                    </p>
+                    <pre>
+
+        // Fonksiyon içinde tanımlanan değişkene erişilemez
+        var globalDegisken = 10;
+        
+        function yerelDegisken() {
+          var yerelDegisken = 20;
+          console.log(globalDegisken); // 10'a erişebilir
+          console.log(yerelDegisken); // 20'ye erişebilir
+        }
+        
+        yerelDegisken();
+        console.log(yerelDegisken); // Hata: yerelDegideğişkenine erişilemez
+                        </pre>
+                </div>
+            </div>
+
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appJS.js"></script>
+</body>
+
+</html>

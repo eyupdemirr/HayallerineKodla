@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Değişkenler ve Veri Türleri</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_JavaScript_Nedir.html">JavaScript Nedir?</a>
+                <a href="2_degiskenlerVeriler.html">Değişkenler ve Veri Türleri</a>
+                <a href="3_operatorler.html">Operatörler</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_dom.html">DOM</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Değişkenler ve Veri Türleri</h3>
+                <p>
+                    Hayal edin, bir kutunuz var ve bu kutuya "Merhaba Dünya!" yazmak istiyorsunuz. Bu kutuyu
+                    isimlendirmek için "mesaj" adını verebilirsiniz. Bu şekilde, kutunuzun içindeki metne her zaman
+                    "mesaj" yazarak erişebilirsiniz. İşte değişkenler tam olarak bu işe yarar!
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <pre>
+
+        // Mesaj kutumuzu oluşturalım
+        var mesaj = "Merhaba Dünya!";
+
+        // Kutumuzu açıp içindeki metni görelim
+        console.log(mesaj); // Çıktı: Merhaba Dünya!
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Değişkenleri Değiştirme:</h4>
+                        <br>
+                        <p>
+                            Değişkenlerimize atadığımız değerleri daha sonra değiştirebiliriz.
+                        </p>
+                        <pre>
+
+        var mesaj = "Merhaba";
+        mesaj = "Hoşgeldiniz";
+        console.log(mesaj); // Çıktı: Hoşgeldiniz                            
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Sabit Değerler (const):</h4>
+                        <br>
+                        <p>
+                            Bazı değerlerin değişmesini istemeyebiliriz. Bu durumlarda const anahtar kelimesini
+                            kullanarak sabit değerler oluşturabiliriz. Sabit değerler atandıktan sonra değiştirilemez.
+                        </p>
+                        <pre>
+
+        const PI = 3.14159;
+        // PI değerini değiştiremeyiz
+        PI = 2.71828; // Hata: PI sabit bir değerdir ve değiştirilemez                                                       
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Değişken Kapsamı (Scope):</h4>
+                        <br>
+                        <p>
+                            Değişkenlerimizin erişilebilirlik alanları vardır. Bir değişkenin kapsamı, tanımlandığı yer
+                            ile sınırlıdır.
+                        </p>
+                        <pre>
+
+        // Blok içinde tanımlanan değişken
+        var mesaj = "Merhaba";
+        if (true) {
+          var isim = "Ali"; // Sadece bu blok içerişilebilir
+        }
+        console.log(isim); // Hata: isim değişkenine erişilemez        
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Değişken Bildirimi (Declaration):</h4>
+                        <br>
+                        <p>
+                            Değişkenlerimizi var, let veya const anahtar kelimeleri ile bildirebiliriz.
+                        </p>
+                        <pre>
+
+        // var ile değişken bildirimi
+        var mesaj = "Merhaba";
+        
+        // let ile değişken bildirimi
+        let isim = "Ali";
+        
+        // const ile sabit değer bildirimi
+        const PI = 3.14159;                            
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="ekranEgitim-konu">
+                <h3>Veri Türleri</h3>
+                <p>
+                    Değişkenlerimiz farklı türde değerler tutabilir. Tıpkı bir kutunun farklı nesneler tutabileceği
+                    gibi, değişkenlerimiz de metin, sayı, mantık değeri gibi farklı türde veriler tutabilir.
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Metin (String)</h4>
+                        <br>
+                        <p>Metin türü, harfler, kelimeler ve semboller içeren değerleri saklar.</p>
+                        <pre>
+
+        var adi = "Ali";
+        var soyadi = "Veli";
+
+        console.log(adi + " " + soyadi); // Çıktı: Ali Veli
+                        </pre>
+                    </div>
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Sayı (Number):</h4>
+                        <br>
+                        <p>Sayı türü, tam sayılar ve ondalıklı sayılar gibi sayısal değerleri saklar.</p>
+                        <pre>
+
+        var yas = 25;
+        var boy = 1.75;
+        
+        console.log("Yaşım: " + yas + ", Boyum: " + boy)Çıktı: Yaşım: 25, Boyum: 1.75
+                        </pre>
+                    </div>
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Mantık (Boolean):</h4>
+                        <br>
+                        <p>Mantık türü, doğru(true) veya yanlış(false) değerleri saklar.</p>
+                        <pre>
+
+        var canli = true;
+        var aktif = false;
+        
+        console.log("Canlı mıyım?: " + canli + ", Aktif miy" + aktif); // Çıktı: Canlı mıyım?: true, Aktif miyfalse    
+                        </pre>
+                    </div>
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Veri Türlerini Kontrol Etme:</h4>
+                        <br>
+                        <p>Hangi türde bir veriye sahip olduğumuzu kontrol etmek için typeof operatörünü kullanabiliriz.
+                        </p>
+                        <pre>
+
+        var mesaj = "Merhaba";
+        var yas = 25;
+        var canli = true;
+        
+        console.log(typeof mesaj); // Çıktı: string
+        console.log(typeof yas); // Çıktı: number
+        console.log(typeof canli); // Çıktı: boolean                      
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appJS.js"></script>
+</body>
+
+</html>

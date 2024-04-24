@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">DOM (Document Object Model):</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_JavaScript_Nedir.html">JavaScript Nedir?</a>
+                <a href="2_degiskenlerVeriler.html">Değişkenler ve Veri Türleri</a>
+                <a href="3_operatorler.html">Operatörler</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_dom.html">DOM</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>DOM (Document Object Model):</h3>
+                <p>
+                    Web sayfaları, HTML kodları ile oluşturulur. DOM, bu HTML kodlarını bir belge olarak temsil eden ve
+                    bu belge üzerinde programatik olarak değişiklik yapmamızı sağlayan bir arayüzdür. Tıpkı bir evin
+                    farklı odalarına ve eşyalarına erişmek için bir harita kullandığımız gibi, DOM da bir web sayfasının
+                    farklı öğelerine ve özelliklerine erişmek için bir harita görevi görür.
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <pre>
+
+        // Sayfadaki bir başlığı seçip rengini kırmızıya değiştirelim
+        var baslik = document.getElementById("baslik"); // ID ile öğeyi seçelim
+        baslik.style.color = "red"; // Rengini kırmızıya ayarlayalım
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>DOM Seçicileri:</h4>
+                        <br>
+                        <p>
+                            DOM'da farklı öğelere ulaşmak için çeşitli seçiciler kullanabiliriz.
+                        </p>
+                        <br>
+                        <ul>
+                            <li><b>getElementById:</b> ID ile öğeyi seçer.</li>
+                            <li><b>getElementsByTagName:</b> Belirli bir etiket adıyla tüm öğeleri seçer.</li>
+                            <li><b>getElementsByClassName:</b> Belirli bir sınıf adıyla tüm öğeleri seçer.</li>
+                            <li><b>querySelector:</b> CSS seçici kullanarak tek bir öğeyi seçer.</li>
+                            <li><b>querySelectorAll:</b> CSS seçici kullanarak birden fazla öğeyi seçer.</li>
+                        </ul>
+                        <pre>
+
+        // Sayfadaki tüm paragrafları seçip arka plan rengini griye değiştirelim
+        var paragraflar = document.getElementsByTagName("p"); // Tüm paragrafları seçelim
+
+        for (var i = 0; i < paragraflar.length; i++) {
+          paragraflar[i].style.backgroundColor = "gray"; // Arka plan rengini griye ayarlayalım
+        }
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>DOM Özellikleri:</h4>
+                        <br>
+                        <p>
+                            DOM öğelerinin çeşitli özellikleri vardır. Bu özellikleri kullanarak öğelerin görünümünü,
+                            içeriğini ve davranışını değiştirebiliriz.
+                        </p>
+                        <pre>
+
+        // Sayfadaki bir bağlantının href özelliğini ve metnini değiştirelim
+        var baglanti = document.getElementById("baglanti"); // ID ile öğeyi seçelim
+        baglanti.href = "https://www.org.com"; // href özelliğini değiştirelim
+        baglanti.innerText = "Yeni Bağlantı Metni"; // Metnini değiştirelim
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>DOM Olay İşleyicileri:</h4>
+                        <br>
+                        <p>
+                            DOM öğeleri, tıklama, fare hareketleri, klavye basma gibi olaylara tepki verebilir. Bu
+                            olaylara tepki vermek için olay işleyicileri kullanabiliriz.
+                        </p>
+                        <pre>
+
+        // Sayfadaki bir butona tıklandığında bir mesaj yazdıralım
+        var buton = document.getElementById("buton"); // ID ile öğeyi seçelim
+        buton.addEventListener("click", function() {
+          alert("Butona tıklandı!");
+        });
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>JavaScript ile Neler Yapılabilir?</h4>
+                        <br>
+                        <ul>
+                            <li><b>Kullanıcı etkileşimleri:</b> Kullanıcıların tıklamalarına, fare hareketlerine ve form
+                                girişlerine yanıt verebilirsiniz.</li>
+                            <li><b>Animasyonlar ve görsel efektler:</b> Sayfalarınızda dinamik animasyonlar ve görsel
+                                efektler oluşturabilirsiniz.</li>
+                            <li><b>Dinamik içerik:</b> Kullanıcı girdisine veya sunucu verisine göre değişen içerikler
+                                oluşturabilirsiniz.</li>
+                            <li><b>Oyunlar ve interaktif uygulamalar:</b> Eğlenceli ve etkileşimli oyunlar ve
+                                uygulamalar geliştirebilirsiniz.</li>
+                            <li><b>Web API'leri ile entegrasyon:</b> Haritalar, videolar ve sosyal medya gibi web
+                                API'lerini kullanarak web sitenize yeni fonksiyonlar ekleyebilirsiniz.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appJS.js"></script>
+</body>
+
+</html>

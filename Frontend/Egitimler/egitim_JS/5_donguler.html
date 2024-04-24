@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Döngüler</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_JavaScript_Nedir.html">JavaScript Nedir?</a>
+                <a href="2_degiskenlerVeriler.html">Değişkenler ve Veri Türleri</a>
+                <a href="3_operatorler.html">Operatörler</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_dom.html">DOM</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Döngüler</h3>
+                <p>
+                    Döngüler, programımızda belirli bir kod bloğunu tekrar tekrar çalıştırmamızı sağlar. Tekrarlayan
+                    işlemleri otomatikleştirmek ve kodumuzu daha kısa ve verimli hale getirmek için döngülerden
+                    faydalanabiliriz.
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>for Döngüsü</h4>
+                        <br>
+                        <p>
+                            for döngüsü, belirli bir sayıda tekrarlama yapmak için kullanılır.
+                        </p>
+                        <pre>
+
+        // 1'den 10'a kadar sayıları yazdıralım
+        for (var i = 1; i <= 10; i++) {
+          console.log(i);
+        }
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>while Döngüsü</h4>
+                        <br>
+                        <p>
+                            while döngüsü, bir koşul doğru olduğu sürece tekrarlama yapar.
+                        </p>
+                        <pre>
+
+        // Bir sayı 100'e ulaşana kadar rastgele sayılar üretelim
+        var sayi = 0;
+
+        while (sayi < 100) {
+          sayi = Math.floor(Math.random() * 101); // 0 ile 100 arasında rastgele bir sayı üretelim
+          console.log("Rastgele Sayı: " + sayi);
+        }
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>do-while Döngüsü</h4>
+                        <br>
+                        <p>
+                            do-while döngüsü, bir koşul doğru olduğunda tekrarlama yapar, ancak koşul yanlış olsa bile
+                            döngü en az bir kez çalıştırılır.
+                        </p>
+                        <pre>
+
+        // Bir şifre girilene kadar kullanıcıdan şifre isteyelim
+        var sifreGirilen = false;
+        var sifre;
+
+        do {
+          sifre = prompt("Şifrenizi giriniz:");
+        
+          if (sifre === "1234") {
+            sifreGirilen = true;
+            console.log("Doğru şifreyi girdiniz!");
+          } else {
+            console.log("Hatalı şifre!");
+          }
+        } while (!sifreGirilen);
+
+        //Bu kod, kullanıcıdan "1234" şifresini girmesini isteyecek ve şifre doğru girilene kadar bu işlemi tekrarlayacaktır.
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>for...in Döngüsü</h4>
+                        <br>
+                        <p>
+                            for...in döngüsü, bir nesnenin tüm özelliklerini sırayla dolaşmak için kullanılır.
+                        </p>
+                        <pre>
+
+        // Bir öğrencinin tüm bilgilerini yazdıralım
+        var ogrenci = {
+          isim: "Ali",
+          soyisim: "Veli",
+          yas: 18,
+          okul: "Atatürk İlkokulu"
+        };
+        
+        for (var anahtar in ogrenci) {
+          console.log(anahtar + ": " + ogrenci[anahtar]);
+        }                            
+                        </pre>
+                        <pre>
+
+        //Output
+        isim: Ali
+        soyisim: Veli
+        yas: 18
+        okul: Atatürk İlkokulu                    
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>for...of Döngüsü</h4>
+                        <br>
+                        <p>
+                            for...of döngüsü, bir dizinin tüm öğelerini sırayla dolaşmak için kullanılır.
+                        </p>
+                        <pre>
+
+        // Bir meyve dizisinin tüm öğelerini yazdıralım
+        var meyveler = ["Elma", "Muz", "Portakal"];
+        
+        for (var meyve of meyveler) {
+          console.log(meyve);
+        }                                                
+                        </pre>
+                        <pre>
+
+        //Output
+        Elma
+        Muz
+        Portakal                  
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appJS.js"></script>
+</body>
+
+</html>

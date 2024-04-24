@@ -1,0 +1,52 @@
+Yapmayı Düşündüklerim
+- eğitim ekranlarının en altına ileri ve geri butonları eklemek. Prototip tasarım kodları aşağıda.
+- Python eğitimleri eklemeye devam et.
+- Alıştırmalar için örnek yapı bul.
+- Kullanıcı Kayıt ve Giriş işlemleri için geliştirmelere başlanmalı PHP ile. 
+
+.ekranEgitim-alt-konu .butonlar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ekranEgitim-alt-konu .butonlar button {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    border-radius: auto;
+    font-weight: bolder;
+    background-color: var(--bright-color);
+    color: var(--dark-color);
+}
+
+.ekranEgitim-alt-konu .butonlar button a:link,
+.ekranEgitim-alt-konu .butonlar button a:visited,
+.ekranEgitim-alt-konu .butonlar button a:hover,
+.ekranEgitim-alt-konu .butonlar button a:active {
+    color: var(--dark-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.ekranEgitim-alt-konu .butonlar button:hover,
+.ekranEgitim-alt-konu .butonlar button a:hover {
+    color: var(--bright-color);
+    background-color: var(--tertiary-color);
+    transition: 0.2s ease;
+}
+
+
+<div class="ekranEgitim-konu">
+    <div class="ekranEgitim-alt-konular">
+        <div class="ekranEgitim-alt-konu">
+            <div class="butonlar">
+                <button type="button"><a href="/Frontend/index.html" id="btn_geriGit">Anasayfa'ya
+                        Dön</a></button>
+                <button type="button"><a href="/Frontend/Egitimler/egitim_Python/2_veriTurleri.html"
+                        id="btn_ileriGit">Sonraki
+                        Eğitime Geç</a></button>
+            </div>
+        </div>
+    </div>
+</div>

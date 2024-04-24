@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Koşullu İfadeler</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_JavaScript_Nedir.html">JavaScript Nedir?</a>
+                <a href="2_degiskenlerVeriler.html">Değişkenler ve Veri Türleri</a>
+                <a href="3_operatorler.html">Operatörler</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_dom.html">DOM</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Koşullu İfadeler</h3>
+                <p>
+                    Koşullu ifadeler, programımızın akışını belirli durumlara göre kontrol etmemizi sağlar. Bir koşulun
+                    doğru veya yanlış olmasına göre farklı kodlar çalıştırabiliriz.
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>if-else:</h4>
+                        <br>
+                        <p>
+                            En temel koşullu ifade if-else ifadesidir. Bu ifadede, bir koşulun doğru olması durumunda
+                            bir kod bloğu, yanlış olması durumunda ise başka bir kod bloğu çalıştırılır.
+                        </p>
+                        <pre>
+
+        var yas = 18;
+        if (yas >= 18) {
+          console.log("Yetişkin");
+        } else {
+          console.log("Çocuk");
+        }
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>switch-case:</h4>
+                        <br>
+                        <p>
+                            Birden fazla koşulu kontrol etmek için switch-case ifadesini kullanabiliriz. Bu ifadede, bir
+                            değerin farklı değerlerle karşılaştırılması ve her duruma göre farklı kodlar çalıştırılması
+                            mümkündür.
+                        </p>
+                        <pre>
+
+        var meyve = "elma";
+        switch (meyve) {
+          case "elma":
+            console.log("Elma lezzetlidir!");
+            break;
+          case "muz":
+            console.log("Muz da lezzetlidir!");
+            break;
+          case "portakal":
+            console.log("Portakal da güzel bir meyvedir!");
+            break;
+          default:
+            console.log("Bilinmeyen meyve");
+        }
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>ternary Operatör:</h4>
+                        <br>
+                        <p>
+                            Koşullu ifadeleri kısaltmak için ternary operatörü kullanılabilir. Bu operatörde, bir
+                            koşulun doğru veya yanlış olmasına göre iki değerden biri seçilir ve bu değer bir değişkene
+                            atanır.
+                        </p>
+                        <pre>
+
+        var canli = true;
+        var mesaj = canli ? "Canlıyım" : "Canlı değilim";
+
+        console.log(mesaj); // Çıktı: Canlıyım
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Koşullu İfadelerde Dikkat Edilmesi Gerekenler:</h4>
+                        <br>
+                        <ul>
+                            <li>Koşullar doğru şekilde tanımlanmalıdır.</li>
+                            <li>Her kod bloğunun sonunda break veya return ifadesi kullanılması önerilir.</li>
+                            <li>Karmaşık koşullu ifadeler yerine, daha basit ve anlaşılır kodlar yazmaya özen
+                                gösterilmelidir.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appJS.js"></script>
+</body>
+
+</html>

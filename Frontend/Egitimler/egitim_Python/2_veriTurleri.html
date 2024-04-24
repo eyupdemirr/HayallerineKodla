@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylePython.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Veri Tipleri</h2>
+            </div>
+            <div class="egitimDersler">
+                <a href="1_Python_Nedir.html">Python Nedir?</a>
+                <a href="2_veriTurleri.html">Veri Tipleri</a>
+                <a href="3_degiskenler.html">Değişkenler ve Atanma</a>
+                <a href="4_kosullar.html">Koşul İfadeleri</a>
+                <a href="5_donguler.html">Döngüler</a>
+                <a href="6_fonksiyonlar.html">Fonksiyonlar</a>
+                <a href="7_veriYapilari.html">Veri Yapıları</a>
+                <a href="8_oop.html">Nesne Yönelimli Programlama</a>
+                <a href="9_debugging.html">Hata Ayıklama</a>
+                <a href="10_frameworks.html">Harici Kütüphaneler</a>
+                <a href="11_databaseConnections.html">Veri Tabanı Bağlantıları</a>
+                <a href="12_sectors.html">Seçimlik Geliştirme Alanları</a>
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Veri Tipleri</h3>
+                <p>
+                    Hayal edin, bir kutunuz var ve bu kutuya farklı nesneler koymak istiyorsunuz. Bu nesnelerin her
+                    birinin farklı bir türü olduğunu biliyorsunuz. Tıpkı kutumuzdaki nesneler gibi, Python'da da farklı
+                    türdeki verileri saklamak için veri tipleri kullanıyoruz.
+                    <br>
+                    Veri tipleri, veriyi nasıl temsil edeceğimizi ve onunla nasıl işlem yapabileceğimizi belirler.
+                </p><br>
+                <h4>Python'da 4 Temel Veri Tipi Vardır</h4>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>1. Sayılar (Numbers):</h4>
+                        <br>
+                        <ul>
+                            <li><b>Tam Sayılar (Integers):</b> Bütün sayıları temsil eder (örneğin: 1, 5, -10).</li>
+                            <li><b>Ondalık Sayılar (Floats):</b> Ondalıklı sayıları temsil eder (örneğin: 3.14, 2.718).
+                            </li>
+                            <li><b>Karma Sayılar (Complex Numbers):</b> Gerçek ve sanal kısımdan oluşan sayıları temsil
+                                eder (örneğin: 3+4j, 2-5j).</li>
+                        </ul>
+                        <pre>
+
+        tamSayi = 10
+        ondalikSayi = 3.14
+        karmaSayi = 2+5j
+
+        print(type(tamSayi))  # Çıktı: <class 'int'>
+        print(type(ondalikSayi))  # Çıktı: <class 'float'>
+        print(type(karmaSayi))  # Çıktı: <class 'complex'>
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>2. Metin (Strings):</h4>
+                        <br>
+                        <p>
+                            Tırnak işaretleri içinde yazılan karakter dizilerini temsil eder. Tek tırnak ('') veya çift
+                            tırnak ("") kullanılabilir.
+                        </p>
+                        <pre>
+
+        metin = "Merhaba Dünya!"
+        baslik = 'Python Veri Tipleri'
+
+        print(type(metin))  # Çıktı: <class 'str'>
+        print(type(baslik))  # Çıktı: <class 'str'>
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>3. Mantık Değerleri (Booleans):</h4>
+                        <br>
+                        <p>
+                            Doğru (True) veya yanlış (False) değerlerini temsil eder.
+                        </p>
+                        <pre>
+
+        dogru = True
+        yanlis = False
+
+        print(type(dogru))  # Çıktı: <class 'bool'>
+        print(type(yanlis))  # Çıktı: <class 'bool'>
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>4. Listeler (Lists):</h4>
+                        <br>
+                        <p>
+                            Farklı veri tiplerinden öğeler içeren sıralı koleksiyonlardır. Köşeli parantez [] ile
+                            gösterilir.
+                        </p>
+                        <pre>
+
+        sayilar = [1, 2, 3, 4, 5]
+        metinler = ["Elma", "Muz", "Portakal"]
+        karisik = [10, "Merhaba", 3.14, True]
+                                
+        print(type(sayilar))  # Çıktı: <class 'list'>
+        print(type(metinler))  # Çıktı: <class 'list'>
+        print(type(karisik))  # Çıktı: <class 'list'>
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ekranEgitim-konu">
+                <h3>Veri Tiplerinde İşlemler</h3>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Veri Tiplerini Kontrol Etme:</h4>
+                        <br>
+                        <p>
+                            Bir değişkenin veri tipini type() fonksiyonu ile kontrol edebilirsiniz.
+                        </p>
+                        <pre>
+
+        x = 10
+        y = "Merhaba"
+        z = True
+
+        print(type(x))  # Çıktı: <class 'int'>
+        print(type(y))  # Çıktı: <class 'str'>
+        print(type(z))  # Çıktı: <class 'bool'>
+                        </pre>
+                    </div>
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Veri Tipleri Dönüştürme:</h4>
+                        <br>
+                        <p>
+                            Bir veri tipini başka bir veri tipine dönüştürmek için int(), float(), str(), bool() gibi
+                            fonksiyonları kullanabilirsiniz.
+                        </p>
+                        <pre>
+
+        x = 10
+        y = str(x)
+        z = float(y)
+        
+        print(type(x))  # Çıktı: <class 'int'>
+        print(type(y))  # Çıktı: <class 'str'>
+        print(type(z))  # Çıktı: <class 'float'>                    
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appPython.js"></script>
+</body>
+
+</html>
