@@ -20,7 +20,7 @@
     <div class="container">
         <div class="menu">
             <div class="egitimBaslik" style="color: var(--primary-color);">
-                <h2 id="link">Python Nedir?</h2>
+                <h2 id="link">Fonksiyonlar</h2>
             </div>
             <div class="egitimDersler">
                 <a href="1_Python_Nedir.html">Python Nedir?</a>
@@ -39,52 +39,89 @@
         </div>
         <div class="ekranEgitim">
             <div class="ekranEgitim-konu">
-                <h3>Konu Başlığı</h3>
+                <h3>Fonksiyonlar</h3>
                 <p>
-                    Konu ile ilgili açıklama
+                    Hayal edin, bir oyun oynuyorsunuz ve belirli bir işlemi her seferinde tekrarlamak yerine, bu işlemi
+                    bir kere kodlayıp oyunda istediğiniz zaman kullanmak istiyorsunuz. Tıpkı bu oyunda olduğu gibi,
+                    Python'da da programlarımızda tekrarlayan kodları bir kere yazıp her seferinde kullanmak için
+                    fonksiyonları kullanabiliriz.
+                </p>
+                <p>
+                    Fonksiyonlar, belirli bir görevi yerine getirmek için tasarlanmış kod bloklardır.
                 </p>
                 <div class="ekranEgitim-alt-konular">
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
+                        <h4>Fonksiyon Oluşturma:</h4>
                         <br>
-                        <p>
-                            Alt Konu başlığı ile ilgili açıklama
-                        </p>
+                        <pre>
+
+        def fonksiyonAdi(parametre1, parametre2, ...):
+        """Fonksiyonun açıklaması"""
+        # Fonksiyonun gövdesi
+        pass
+                        </pre>
+                        <pre>
+
+        Örnek Kod:
+        def selamVer(isim):
+          """Birisine selam verir."""
+          print(f"Merhaba {isim}!")
+
+        selamVer("Ali")  # Fonksiyon çağrısı
+                        </pre>
+                        <hr>
+                        <pre>
+
+        //Çıktı
+        Merhaba Ali!
+                        </pre>
                     </div>
+
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
+                        <h4>Fonksiyon Parametreleri:</h4>
                         <br>
                         <p>
-                            Alt Konu başlığı ile ilgili açıklama
+                            Fonksiyonlar, parametreler adı verilen giriş verileri alabilir.
                         </p>
+                        <pre>
+
+        def kareHesapla(sayi):
+          """Bir sayının karesini hesaplar."""
+          return sayi * sayi
+
+        sonuc = kareHesapla(5)
+        print(sonuc)  # Çıktı: 25
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Fonksiyon Geri Dönüş Değerleri:</h4>
+                        <br>
+                        <p>
+                            Fonksiyonlar, return anahtar kelimesi ile bir değer döndürebilir.
+                        </p>
+                        <pre>
+
+        def toplamHesapla(sayi1, sayi2):
+          """İki sayının toplamını hesaplar."""
+          return sayi1 + sayi2
+
+        toplam = toplamHesapla(10, 20)
+        print(toplam)  # Çıktı: 30
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Fonksiyonların Avantajları</h4>
+                        <br>
+                        <ul>
+                            <li>Kod tekrarlamasını önler.</li>
+                            <li>Programı daha modüler ve organize hale getirir.</li>
+                            <li>Farklı görevler için tekrar kullanılabilir kodlar sağlar.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-
-            <div class="ekranEgitim-konu">
-                <h3>Konu Başlığı</h3>
-                <p>
-                    Konu ile ilgili açıklama
-                </p>
-                <div class="ekranEgitim-alt-konular">
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
-                        <br>
-                        <p>
-                            Alt Konu başlığı ile ilgili açıklama
-                        </p>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
-                        <br>
-                        <p>
-                            Alt Konu başlığı ile ilgili açıklama
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="ekranAlistirma">Alıştırma Ekranı</div>
     </div>

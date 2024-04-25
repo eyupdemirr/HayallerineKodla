@@ -1,0 +1,4 @@
+Yapılanlar:
+- Python Eğitimleri Eklendi
+- HTML Eğitimleri Şablon Eklendi
+- Anasayfa'ya HTML Eğitim Linki Atandı

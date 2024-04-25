@@ -20,7 +20,7 @@
     <div class="container">
         <div class="menu">
             <div class="egitimBaslik" style="color: var(--primary-color);">
-                <h2 id="link">Python Nedir?</h2>
+                <h2 id="link">Döngüler</h2>
             </div>
             <div class="egitimDersler">
                 <a href="1_Python_Nedir.html">Python Nedir?</a>
@@ -39,52 +39,126 @@
         </div>
         <div class="ekranEgitim">
             <div class="ekranEgitim-konu">
-                <h3>Konu Başlığı</h3>
+                <h3>Döngüler</h3>
                 <p>
-                    Konu ile ilgili açıklama
+                    Hayal edin, bir oyun oynuyorsunuz ve oyun bitene kadar belirli bir işlemi tekrarlamak istiyorsunuz.
+                    Tıpkı bu oyunda olduğu gibi, Python'da da programlarımızda belirli bir işlemi tekrarlamak için
+                    döngüleri kullanabiliriz.
+                </p>
+                <p>
+                    Döngüler, bir kod bloğunu belirli bir sayıda veya belirli bir koşul karşılanana kadar tekrarlatır.
+                    Python'da 3 temel döngü vardır.
                 </p>
                 <div class="ekranEgitim-alt-konular">
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
+                        <h4>1. for Döngüsü:</h4>
                         <br>
                         <p>
-                            Alt Konu başlığı ile ilgili açıklama
+                            Belirli bir dizi veya listedeki her öğeyi sırayla işler.
                         </p>
+                        <pre>
+
+        meyveler = ["Elma", "Muz", "Portakal"]
+
+        for meyve in meyveler:
+          print(meyve)
+                        </pre>
+                        <hr>
+                        <pre>
+
+        //Çıktı
+        Elma
+        Muz
+        Portakal
+                        </pre>
                     </div>
+
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
+                        <h4>2. while Döngüsü:</h4>
                         <br>
                         <p>
-                            Alt Konu başlığı ile ilgili açıklama
+                            Belirli bir koşul doğru olduğu sürece kod bloğunu tekrarlar.
                         </p>
+                        <pre>
+
+        x = 1
+
+        while x <= 10:
+          print(x)
+          x += 1                            
+                        </pre>
+                        <hr>
+                        <pre>
+
+        //Çıktı
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>3. range() Fonksiyonu:</h4>
+                        <br>
+                        <p>
+                            Belirli bir aralıktaki sayıları sıralı olarak işler.
+                        </p>
+                        <pre>
+
+        for sayi in range(1, 11):
+        print(sayi)                          
+                        </pre>
+                        <hr>
+                        <pre>
+
+        //Çıktı
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+                        </pre>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Döngülerde Kullanılan İfadeler:</h4>
+                        <br>
+                        <ul>
+                            <li><b>break:</b> Döngüyü aniden sonlandırır.</li>
+                            <li><b>continue:</b> Döngünün bir sonraki yinelemesine geçer.</li>
+                        </ul>
+                        <pre>
+
+        sayilar = [1, 2, 3, 4
+        for sayi in sayilar:
+          if sayi == 3:
+            continue  # Sayı 3 ise döngünün bir sonraki yinelemesine geçer
+          print(sayi)                            
+                        </pre>
+                        <hr>
+                        <pre>
+
+        //Çıktı
+        1
+        2
+        4
+        5
+                        </pre>
                     </div>
                 </div>
             </div>
-
-
-            <div class="ekranEgitim-konu">
-                <h3>Konu Başlığı</h3>
-                <p>
-                    Konu ile ilgili açıklama
-                </p>
-                <div class="ekranEgitim-alt-konular">
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
-                        <br>
-                        <p>
-                            Alt Konu başlığı ile ilgili açıklama
-                        </p>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Alt Konu Başlığı</h4>
-                        <br>
-                        <p>
-                            Alt Konu başlığı ile ilgili açıklama
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </div>
         <div class="ekranAlistirma">Alıştırma Ekranı</div>
     </div>
