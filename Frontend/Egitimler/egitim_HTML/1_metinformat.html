@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Eğitimi</title>
+    <script>
+        window.history.scrollRestoration = "auto";
+    </script>
+    <meta name="description"
+        content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+    <meta name="author" content="EyüpD">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleHTML.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="egitimBaslik" style="color: var(--primary-color);">
+                <h2 id="link">Metin Formatlama</h2>
+            </div>
+            <div class="egitimDersler">
+                <!--Temel Yapı-->
+                <a href="1_HTML_Nedir.html">HTML Nedir?</a>
+                <a href="1_documents.html">HTML Dokümanı Yapısı</a>
+                <a href="1_etiketler.html">Temel HTML Etiketleri</a>
+                <a href="1_metinformat.html">Metin Formatlama</a>
+                <a href="1_baglantilar.html">Bağlantılar</a>
+                <a href="1_gorseller.html">Görseller</a>
+                <a href="1_listeler.html">Listeler</a>
+                <a href="1_tablolar.html">Tablolar</a>
+                <!--Formlar-->
+                <a href="2_formlar.html">Form Etiketi</a>
+                <a href="2_formInputs.html">Form Giriş Alanları</a>
+                <a href="2_formTexts.html">Formlarda Metin Alanları (textarea)</a>
+                <a href="2_formSelects.html">Formlarda Seçenek Kutuları (select)</a>
+                <a href="2_formButtons.html">Formlarda Gönderme Butonu (submit)</a>
+                <a href="2_form.html">Form İşleme</a>
+                <!--Gelişmiş HTML-->
+                <a href="3_cssEntagration.html">CSS ile Entegrasyon</a>
+                <a href="3_semantic.html">Semantik HTML Etiketleri</a>
+                <a href="3_gorselO.html">Görsel Özellikleri</a>
+                <a href="3_metinselO.html">Metin Özellikleri</a>
+                <a href="3_layout.html">Yerleşim</a>
+                <a href="3_baglantilar.html">Bağlantı Stilleri</a>
+                <!--Multimedya-->
+                <a href="4_mediaGorsel.html">Görseller</a>
+                <a href="4_mediaVideo.html">Videolar</a>
+                <a href="4_mediaSounds.html">Sesler</a>
+                <a href="4_mediaObject.html">Nesne Ekleme</a>
+                <!--Erişilebilirlik-->
+                <a href="5_accessibleCoding.html">Erişilebilir HTML Kodlama</a>
+                <a href="5_semanticHTML.html">Semantik HTML Kullanımı</a>
+                <a href="5_screenReaderOptimization.html">Ekran Okuyucu Optimizasyonu</a>
+                <a href="5_ariaWorkshop.html">ARIA Atölye Çalışması</a>
+                <!--Gelişmiş Konular-->
+                <a href="6_htmlFeatures">HTML5 Özellikleri</a>
+                <a href="6_microdata.html">Mikro Veriler (microdata)</a>
+                <a href="6_responsive.html">Duyarlı Tasarım (Responsive)</a>
+                <a href="6_semanticWeb.html">Web Semantiği</a>
+                <a href="6_verification.html">HTML Doğrulama</a>
+                <a href="6_debugging.html">HTML Hata Ayıklama</a>
+
+            </div>
+        </div>
+        <div class="ekranEgitim">
+            <div class="ekranEgitim-konu">
+                <h3>Metin Formatlama</h3>
+                <p>
+                    HTML'de metinleri farklı şekillerde biçimlendirmek için çeşitli etiketler ve öznitelikler bulunur.
+                    Bu sayede metinlerinizi daha dikkat çekici ve okunabilir hale getirebilirsiniz.
+                </p>
+                <div class="ekranEgitim-alt-konular">
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Metin Formatlama Etiketleri:</h4>
+                        <br>
+                        <p>
+                            Kalın Metin: <b> etiketi ile metinlerinizi kalınlaştırabilirsiniz.
+                        </p>
+                        <p><i>İtalik Metin: i etiketi ile metinlerinizi italik hale getirebilirsiniz.</i></p>
+                        <p><u>Altı Çizili Metin: u etiketi ile metinlerinizi altı çizgili hale getirebilirsiniz.</u></p>
+                        <p><s>Üstü Çizili Metin: s etiketi ile metinlerinizi üstü çizgili hale getirebilirsiniz.</s></p>
+                        <p><sup>Üst Yazı: sup etiketi ile metinlerinizi üst yazıya taşıyabilirsiniz.</sup></p>
+                        <p><sub>Alt Yazı: sub etiketi ile metinlerinizi alt yazıya taşıyabilirsiniz.</sub></p>
+                        <p>
+                        <pre>Kod Metni: pre etiketi ile metinlerinizi kod formatında gösterebilirsiniz.</pre>
+                        </p><br>
+                        <p style="color: red;"">Metin Rengi: style özniteliğini kullanarak metinlerin rengini değiştirebilirsiniz.</p>
+                        <p style=" font-size: 20px;">Metin Boyutu: style özniteliğini kullanarak metinlerin boyutunu
+                            değiştirebilirsiniz.</p>
+                        <p style="text-align: right;">Metin Hizalaması: style özniteliğini kullanarak metinlerin
+                            hizalamasını değiştirebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+    </div>
+    <script src="appHTML.js"></script>
+</body>
+
+</html>

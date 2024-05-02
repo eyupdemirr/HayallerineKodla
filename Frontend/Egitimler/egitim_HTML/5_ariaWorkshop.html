@@ -20,7 +20,7 @@
     <div class="container">
         <div class="menu">
             <div class="egitimBaslik" style="color: var(--primary-color);">
-                <h2 id="link">HTML Nedir?</h2>
+                <h2 id="link">ARIA Atölye Çalışması</h2>
             </div>
             <div class="egitimDersler">
                 <!--Temel Yapı-->
@@ -57,7 +57,7 @@
                 <a href="5_screenReaderOptimization.html">Ekran Okuyucu Optimizasyonu</a>
                 <a href="5_ariaWorkshop.html">ARIA Atölye Çalışması</a>
                 <!--Gelişmiş Konular-->
-                <a href="6_htmlFeatures">HTML5 Özellikleri</a>
+                <a href="6_htmlFeatures.html">HTML5 Özellikleri</a>
                 <a href="6_microdata.html">Mikro Veriler (microdata)</a>
                 <a href="6_responsive.html">Duyarlı Tasarım (Responsive)</a>
                 <a href="6_semanticWeb.html">Web Semantiği</a>
@@ -68,90 +68,60 @@
         </div>
         <div class="ekranEgitim">
             <div class="ekranEgitim-konu">
-                <h3>HTML Nedir?</h3>
+                <h3>Giriş:</h3>
                 <p>
-                    HTML (HyperText Markup Language), web sayfalarının temelini oluşturan bir işaretleme dilidir. Metin,
-                    görseller, videolar ve diğer içerikleri düzenlemek ve web tarayıcılarına nasıl görüntüleneceklerini
-                    bildirmek için kullanılır.
+                    ARIA (Accessible Rich Internet Applications), web sayfalarının ve web uygulamalarının daha
+                    erişilebilir hale getirilmesi için kullanılan bir dizi rol, özellik ve state tanımından oluşur.
+                    Görme engelli, işitme engelli, motor becerisi sınırlı veya bilişsel engelli kullanıcılar da dahil
+                    olmak üzere tüm kullanıcılar için daha kapsayıcı ve kullanımı kolay web deneyimleri oluşturmaya
+                    yardımcı olur.
                 </p>
                 <div class="ekranEgitim-alt-konular">
                     <div class="ekranEgitim-alt-konu">
-                        <h4>HTML Dokümanı Yapısı:</h4>
+                        <h4>Atölye Çalışması Hedefi:</h4>
                         <br>
                         <p>
-                            Bir HTML dokümanı, aşağıdaki temel öğelerden oluşur:
+                            Bu atölye çalışmasında, ARIA'nın temel kavramlarını ve nasıl kullanılacağını öğreneceksiniz.
+                            Aşağıdaki konuları ele alacağız:
                         </p>
                         <ul>
-                            <li><b>!DOCTYPE html:</b> Dokümanın HTML5 standardına uyduğunu belirtir.</li>
-                            <li><b>html:</b> HTML dokümanının başlangıcını ve sonunu işaretler.</li>
-                            <li><b>head:</b> Başlık, meta verileri ve diğer sayfa bilgilerini içerir.</li>
-                            <li><b>title:</b> Sayfanın başlığını içerir.</li>
-                            <li><b>body:</b> Sayfanın gövdesini ve kullanıcıların görebileceği tüm içerikleri içerir.
-                            </li>
+                            <li><b>ARIA Rolleri:</b> Web sayfalarındaki öğelerin işlevlerini tanımlamak için kullanılan
+                                roller.</li>
+                            <li><b>ARIA Özellikleri:</b> Rollerle ilişkili ek bilgileri sağlamak için kullanılan
+                                özellikler.</li>
+                            <li><b>ARIA States:</b> Öğelerin durumunu tanımlamak için kullanılan state'ler.</li>
+                            <li><b>ARIA Örnekleri:</b> ARIA'nın farklı web öğelerinde nasıl kullanılacağına dair
+                                örnekler.</li>
                         </ul>
                     </div>
 
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Temel HTML Etiketleri:</h4>
+                        <h4>Atölye Çalışması Akışı:</h4>
                         <br>
-                        <p>HTML etiketleri <> işaretleri arasına yazılır. Hepsi için geçerli olmasada çoğu etiketin
-                                açılış gibi kapanış etiketide olur. Bunların yazımı ise
-                                < /> şeklindedir.
-                        </p>
                         <ul>
-                            <li><b>h1-h6:</b> Başlıklar (en büyükten en küçüğe)</li>
-                            <li><b>p:</b> Paragraf</li>
-                            <li><b>a:</b> Hiperlink</li>
-                            <li><b>br:</b> Satır sonu</li>
-                            <li><b>hr:</b> Yatay çizgi</li>
-                            <li><b>img:</b> Görsel</li>
+                            <li><b>1.Giriş:</b> ARIA'nın ne olduğu ve neden önemli olduğu hakkında bilgi vereceğiz.</li>
+                            <li><b>2.Temel Kavramlar:</b> ARIA rolleri, özellikleri ve state'lerini tanıtacağız.</li>
+                            <li><b>3.Uygulamalı Örnekler:</b> Farklı web öğelerinde ARIA'nın nasıl kullanılacağına dair
+                                örnekler göstereceğiz.</li>
+                            <li><b>4.Soru-Cevap:</b> Katılımcıların sorularını cevaplamak için zaman ayıracağız.</li>
                         </ul>
                     </div>
 
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Metin Formatlama:</h4>
+                        <h4>Katılımcı Gereksinimleri:</h4>
                         <br>
-                        <ul>
-                            <li><b>b:</b> Kalın metin</li>
-                            <li><b>i:</b> Italik metin</li>
-                            <li><b>u:</b> Altı çizili metin</li>
-                            <li><b>s:</b> Üstü çizili metin</li>
-                        </ul>
+                        <p>Bu atölye çalışmasına katılmak için temel HTML ve CSS bilgisine sahip olmanız önerilir. Ekran
+                            okuyucu veya diğer yardımcı teknolojilerle deneyiminiz varsa faydalı olacaktır.</p>
                     </div>
 
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Bağlantılar:</h4>
+                        <h4>Atölye Çalışması Faydaları:</h4>
                         <br>
                         <ul>
-                            <li><b>href:</b> Bağlantının hedef URL'sini belirtir.</li>
-                            <li><b>target:</b> Bağlantının nasıl açılacağını belirtir (örneğin: _blank).</li>
-                        </ul>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Görseller:</h4>
-                        <br>
-                        <ul>
-                            <li><b>src:</b> Görselin URL'sini belirtir.</li>
-                            <li><b>alt:</b> Görselin alternatif metnini belirtir (ekran okuyucular için).</li>
-                        </ul>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Listeler:</h4>
-                        <br>
-                        <ul>
-                            <li><b>ul:</b> Sırasız liste</li>
-                            <li><b>ol:</b> Sıralı liste</li>
-                            <li><b>li:</b> Liste öğesi</li>
-                        </ul>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Tablolar:</h4>
-                        <br>
-                        <ul>
-                            <li><b>table:</b> Tablo</li>
-                            <li><b>tr:</b> Tablo satırı</li>
-                            <li><b>th:</b> Başlık hücresi</li>
-                            <li><b>td:</b> Veri hücresi</li>
+                            <li>ARIA'nın temel kavramlarını ve nasıl kullanılacağını öğreneceksiniz.</li>
+                            <li>Farklı web öğelerinde ARIA'yı nasıl uygulayacağınızı göreceksiniz.</li>
+                            <li>Görme engelli, işitme engelli, motor becerisi sınırlı veya bilişsel engelli kullanıcılar
+                                için daha kapsayıcı web deneyimleri oluşturma becerilerinizi geliştireceksiniz.</li>
                         </ul>
                     </div>
                 </div>

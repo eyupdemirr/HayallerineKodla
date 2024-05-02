@@ -20,7 +20,7 @@
     <div class="container">
         <div class="menu">
             <div class="egitimBaslik" style="color: var(--primary-color);">
-                <h2 id="link">HTML Nedir?</h2>
+                <h2 id="link">Formlarda Seçenek Kutuları (select)</h2>
             </div>
             <div class="egitimDersler">
                 <!--Temel Yapı-->
@@ -68,91 +68,49 @@
         </div>
         <div class="ekranEgitim">
             <div class="ekranEgitim-konu">
-                <h3>HTML Nedir?</h3>
+                <h3>Formlarda Seçenek Kutuları (select)</h3>
                 <p>
-                    HTML (HyperText Markup Language), web sayfalarının temelini oluşturan bir işaretleme dilidir. Metin,
-                    görseller, videolar ve diğer içerikleri düzenlemek ve web tarayıcılarına nasıl görüntüleneceklerini
-                    bildirmek için kullanılır.
+                    HTML'de select etiketi, formlarda kullanıcılardan birden fazla seçenekten birini seçmelerini
+                    sağlayan açılır menüler oluşturmak için kullanılır.
                 </p>
                 <div class="ekranEgitim-alt-konular">
                     <div class="ekranEgitim-alt-konu">
-                        <h4>HTML Dokümanı Yapısı:</h4>
+                        <h4>Özellikleri:</h4>
                         <br>
-                        <p>
-                            Bir HTML dokümanı, aşağıdaki temel öğelerden oluşur:
+                        <ul>
+                            <li><b>name:</b> Seçenek kutusunun adını belirtir. Bu isim, form verilerini sunucuya
+                                göndermek için kullanılır.</li>
+                            <li><b>id:</b> Seçenek kutusuna benzersiz bir kimlik verir.</li>
+                            <li><b>required:</b> Bu alanın seçilmesini zorunlu hale getirir.</li>
+                            <li><b>multiple:</b> Kullanıcının birden fazla seçenek seçmesine izin verir.</li>
+                            <li><b>disabled:</b> Seçenek kutusunu devre dışı bırakır.</li>
+                            <li><b>size:</b> Seçenek kutusunda aynı anda kaç seçeneğin görüneceğini belirtir.</li>
+                        </ul>
+                    </div>
+
+                    <div class="ekranEgitim-alt-konu">
+                        <h4>Kullanım:</h4>
+                        <br>
+                        <p>Seçenek kutuları, ürün seçimi, renk seçimi, kategori seçimi gibi çeşitli senaryolarda
+                            kullanılabilir.
                         </p>
-                        <ul>
-                            <li><b>!DOCTYPE html:</b> Dokümanın HTML5 standardına uyduğunu belirtir.</li>
-                            <li><b>html:</b> HTML dokümanının başlangıcını ve sonunu işaretler.</li>
-                            <li><b>head:</b> Başlık, meta verileri ve diğer sayfa bilgilerini içerir.</li>
-                            <li><b>title:</b> Sayfanın başlığını içerir.</li>
-                            <li><b>body:</b> Sayfanın gövdesini ve kullanıcıların görebileceği tüm içerikleri içerir.
-                            </li>
-                        </ul>
                     </div>
 
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Temel HTML Etiketleri:</h4>
+                        <h4>Seçenek Ekleme:</h4>
                         <br>
-                        <p>HTML etiketleri <> işaretleri arasına yazılır. Hepsi için geçerli olmasada çoğu etiketin
-                                açılış gibi kapanış etiketide olur. Bunların yazımı ise
-                                < /> şeklindedir.
-                        </p>
-                        <ul>
-                            <li><b>h1-h6:</b> Başlıklar (en büyükten en küçüğe)</li>
-                            <li><b>p:</b> Paragraf</li>
-                            <li><b>a:</b> Hiperlink</li>
-                            <li><b>br:</b> Satır sonu</li>
-                            <li><b>hr:</b> Yatay çizgi</li>
-                            <li><b>img:</b> Görsel</li>
-                        </ul>
+                        <p>Seçenek kutularına option etiketi kullanarak seçenekler ekleyebilirsiniz.</p>
                     </div>
 
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Metin Formatlama:</h4>
+                        <h4>Seçili Seçenek:</h4>
                         <br>
-                        <ul>
-                            <li><b>b:</b> Kalın metin</li>
-                            <li><b>i:</b> Italik metin</li>
-                            <li><b>u:</b> Altı çizili metin</li>
-                            <li><b>s:</b> Üstü çizili metin</li>
-                        </ul>
-                    </div>
-
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Bağlantılar:</h4>
-                        <br>
-                        <ul>
-                            <li><b>href:</b> Bağlantının hedef URL'sini belirtir.</li>
-                            <li><b>target:</b> Bağlantının nasıl açılacağını belirtir (örneğin: _blank).</li>
-                        </ul>
+                        <p>selected özniteliğini kullanarak varsayılan olarak seçili seçeneği belirleyebilirsiniz.</p>
                     </div>
                     <div class="ekranEgitim-alt-konu">
-                        <h4>Görseller:</h4>
+                        <h4>Seçenek Grupları:</h4>
                         <br>
-                        <ul>
-                            <li><b>src:</b> Görselin URL'sini belirtir.</li>
-                            <li><b>alt:</b> Görselin alternatif metnini belirtir (ekran okuyucular için).</li>
-                        </ul>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Listeler:</h4>
-                        <br>
-                        <ul>
-                            <li><b>ul:</b> Sırasız liste</li>
-                            <li><b>ol:</b> Sıralı liste</li>
-                            <li><b>li:</b> Liste öğesi</li>
-                        </ul>
-                    </div>
-                    <div class="ekranEgitim-alt-konu">
-                        <h4>Tablolar:</h4>
-                        <br>
-                        <ul>
-                            <li><b>table:</b> Tablo</li>
-                            <li><b>tr:</b> Tablo satırı</li>
-                            <li><b>th:</b> Başlık hücresi</li>
-                            <li><b>td:</b> Veri hücresi</li>
-                        </ul>
+                        <p>optgroup etiketi kullanarak seçenekleri gruplara ayırabilirsiniz.</p>
                     </div>
                 </div>
             </div>
