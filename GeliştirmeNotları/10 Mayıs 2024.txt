@@ -1,0 +1,49 @@
+Recommandation AI geliştirme Notları
+
+
+Klasör Yapısı
+--------------
+
+RecommandationAI/
+│
+├── data/ (verilerinizi saklayacağınız klasör)
+│   ├── users.csv
+│   └── messages.csv
+│
+├── models/ (model ve diğer yardımcı dosyalar)
+│   ├── train_model.py
+│   ├── recommend.py
+│   └── preprocessing.py
+│
+├── web_app/ (web uygulamasının dosyaları)
+│   ├── templates/
+│   │   └── index.html
+│   ├── static/
+│   │   └── style.css
+│   └── app.py
+│
+├── db/ (veritabanı dosyalarını saklayacağınız klasör)
+│   └── mydatabase.db
+│
+├── main.py (proje ana dosyası)
+└── requirements.txt (kullanılan kütüphaneleri listeler)
+
+data/: Verileri saklamak için kullanılan klasör.
+models/: Model ve yardımcı dosyaların bulunduğu klasör.
+web_app/: Web uygulaması dosyalarının bulunduğu klasör.
+db/: SQLite veritabanı dosyasını saklamak için kullanılan klasör.
+main.py: Projenin ana dosyası. Bu dosya, proje çalıştırıldığında ilk olarak yürütülen dosyadır.
+requirements.txt: Kullanılan kütüphanelerin listelendiği dosya.
+
+Geliştirme Aşaması:
+models Klasöründe Dosya Yapısı:
+
+train_model.py: Bu dosyada, model eğitimi için gerekli kodları yazacaksınız. Bu kodlar, veri setini yüklemeyi, model parametrelerini ayarlamayı ve modeli eğitmeyi içerecektir.
+
+recommend.py: Bu dosyada, eğitimli modellerden kullanıcılara öneriler sunmak için gerekli kodları yazacaksınız. Bu kodlar, kullanıcı profillerini oluşturmayı, en uygun modelleri seçmeyi ve önerileri hesaplamayı içerecektir.
+
+preprocessing.py: Bu dosyada, verilerinizi model eğitimi için hazırlamak için gerekli kodları yazacaksınız. Bu kodlar, eksik değerleri ele almayı, verileri ölçeklendirmeyi ve kategorik verileri kodlamayı içerebilir.
+
+
+One-Hot Encoding
+User verilerindeki string tipleri numerik tiplere dönüştürülemediğinden bunların string olarak tanımlanmaları gerekir. 

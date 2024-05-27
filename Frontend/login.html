@@ -82,19 +82,6 @@
             font-weight: bold;
             cursor: pointer;
         }
-
-        #kayit-ol-icerik {
-            display: none;
-        }
-
-        .cinsiyet {
-            display: flex;
-            margin-top: 10px;
-        }
-
-        .cinsiyet label {
-            margin-right: 10px;
-        }
     </style>
 </head>
 
@@ -102,56 +89,22 @@
     <div class="container">
         <div class="box">
             <div class="header">
-                <a href="#" id="giris-yap" class="active">Giriş Yap</a>
-                <a href="#" id="kayit-ol">Kayıt Ol</a>
+                <a href="#giris-yap-icerik" id="giris-yap" class="active">Giriş Yap</a>
+                <a href="/Frontend/signUp.html" id="kayit-ol">Kayıt Ol</a>
             </div>
             <div class="content">
                 <div id="giris-yap-icerik">
-                    <input type="text" placeholder="Kullanıcı Adı" required>
-                    <input type="password" placeholder="Şifre" required>
-                    <button type="submit">Giriş Yap</button>
+                    <form action="/Backend/db_userLogin.php" method="POST">
+                        <label for="user_name">Kullanıcı Adınız:</label>
+                        <input type="text" placeholder="Kullanıcı Adı" name="user_name" required>
+                        <label for="password">Şifreniz:</label>
+                        <input type="password" placeholder="Şifre" name="password" required>
+                        <button type="submit">Giriş Yap</button>
+                    </form>
                 </div>
-
-                <div id="kayit-ol-icerik">
-                    <input type="text" placeholder="Adınız" id="ad" required>
-                    <input type="text" placeholder="Soyadınız" id="soyad" required>
-                    <input type="text" placeholder="Kullanıcı Adı" id="kullanici-adi" required>
-                    <input type="password" placeholder="Şifre" id="sifre" required>
-                    <input type="date" placeholder="Doğum Tarihi" id="dogum-tarihi" required>
-                    <div class="cinsiyet">
-                        <label for="erkek">Erkek</label>
-                        <input type="radio" name="cinsiyet" id="erkek" value="erkek">
-                        <label for="kadin">Kadın</label>
-                        <input type="radio" name="cinsiyet" id="kadin" value="kadin">
-                    </div>
-                    <button type="submit">Kayıt Ol</button>
-                </div>
-
             </div>
         </div>
     </div>
-
-    <script>
-        const girisYap = document.getElementById("giris-yap");
-        const kayitOl = document.getElementById("kayit-ol");
-        const girisYapIcerik = document.getElementById("giris-yap-icerik");
-        const kayitOlIcerik = document.getElementById("kayit-ol-icerik");
-
-        kayitOl.addEventListener("click", () => {
-            girisYap.classList.remove("active");
-            kayitOl.classList.add("active");
-            girisYapIcerik.style.display = "none";
-            kayitOlIcerik.style.display = "block";
-        });
-
-        girisYap.addEventListener("click", () => {
-            kayitOl.classList.remove("active");
-            girisYap.classList.add("active");
-            kayitOlIcerik.style.display = "none";
-            girisYapIcerik.style.display = "block";
-        });
-    </script>
-
 </body>
 
 </html>

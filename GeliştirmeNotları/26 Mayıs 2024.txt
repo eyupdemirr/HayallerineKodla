@@ -1,0 +1,7 @@
+HangiAlan AI geliştirmesi tamamlandı. 
+Kontrol edildi.
+Web arayüzü düzenlenecek.
+Web arayüzüne entegre edilecek.
+Diğer ai geliştirilecek. 
+Node.js ile kullanıcı girişleri ve veritabanı bağlantısı işlemlerine girişilecek.
+Siteye dil ayarı eklenecek.

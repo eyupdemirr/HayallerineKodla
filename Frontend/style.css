@@ -213,8 +213,9 @@
 }
 
 /*Hayallerine Kodla Asistanı*/
-#Asistan {
+.kutu #Asistan {
     background-color: var(--primary-color);
+
 }
 
 
