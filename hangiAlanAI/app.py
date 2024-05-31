@@ -1,12 +1,16 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import os
 
 app = Flask(__name__)
 
+# Define the directory where your scaler and model files are stored
+MODEL_DIR = os.path.dirname(__file__)
+
 # Load the scaler, model, and class names
-scaler = pickle.load(open("scaler.pkl", 'rb'))
-model = pickle.load(open("model.pkl", 'rb'))
+scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
+model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 class_names = [
     'Frontend Developer', 'Android Developer', 'Data Scientist', 'Cybersecurity Specialist',
     'Database Designer', 'Robotics Engineer', 'Software Tester', 'Business Systems Analyst',

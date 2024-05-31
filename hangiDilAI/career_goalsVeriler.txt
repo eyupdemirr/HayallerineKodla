@@ -1,0 +1,80 @@
+Python
+    Web Development
+    Data Science
+    Machine Learning
+    Web Scraping
+    GUI Development
+    Automation
+    Game Development
+
+JavaScript
+    Frontend Frameworks
+    Backend Frameworks
+    Data Visualization  
+    Animation
+        
+
+Java
+    Spring Framework
+    Android Development
+
+C#
+    .NET Framework
+    .NET Core
+        
+
+PHP
+    Laravel
+    Symfony
+    CodeIgniter
+
+Ruby
+    Ruby on Rails
+
+Swift
+    iOS Development
+    macOS Development
+
+Kotlin
+    Android Development
+
+Dart
+    Flutter
+
+SQL
+    Relational Databases
+    NoSQL Databases
+
+
+HTML
+    CSS    
+    JavaScript      
+
+Redux
+    Redux Toolkit
+
+Webpack
+    Babel
+
+Git
+    Version Control
+
+
+Docker
+    Containerization
+
+Heroku
+    Cloud Platform
+    Deployment
+
+AWS
+    Amazon Web Services
+
+
+Azure
+    Microsoft Azure
+
+
+Google Cloud Platform
+    GCP
+
