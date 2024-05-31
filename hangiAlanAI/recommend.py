@@ -5,7 +5,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 
 #Load CSV data 
-df1 = pd.read_csv("hangiAlanAI\\app\\student-scores.csv")
+df1 = pd.read_csv("hangiAlanAI\\student-scores.csv")
 df = df1.copy()
 df.head()
 
@@ -297,23 +297,33 @@ else:
 
 
 """ Saving & Load Files """
+import os
 import pickle
+
+# Define the directory path for model files
+MODEL_DIR = os.path.dirname(__file__)
+
 # SAVE FILES
-pickle.dump(scaler,open("scaler.pkl",'wb'))
-pickle.dump(model,open("model.pkl",'wb'))
+pickle.dump(scaler, open(os.path.join(MODEL_DIR, "scaler.pkl"), 'wb'))
+pickle.dump(model, open(os.path.join(MODEL_DIR, "model.pkl"), 'wb'))
+
 # Load the scaler, label encoder, and model
-scaler = pickle.load(open("scaler.pkl", 'rb'))
-model = pickle.load(open("model.pkl", 'rb'))
+scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
+model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 
 
 """ Recommendation System """
 #Recommendation System
+import os
 import pickle
 import numpy as np
 
+# Define the directory path for model files
+MODEL_DIR = os.path.dirname(__file__)
+
 # Load the scaler, label encoder, model, and class names
-scaler = pickle.load(open("scaler.pkl", 'rb'))
-model = pickle.load(open("model.pkl", 'rb'))
+scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
+model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 class_names = [
     'Frontend Developer', 'Android Developer', 'Data Scientist', 'Cybersecurity Specialist',
     'Database Designer', 'Robotics Engineer', 'Software Tester', 'Business Systems Analyst',
