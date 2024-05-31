@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studies Recommendation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 50px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background-color: #fff;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mynav shadow-sm" style="background:black; color:white; text-decoration:bold; padding:10px;width:100%;">
+        <h1 class="text-center">Which Sector is for Me?</h1>
+    </div>
+    <div class="container">
+        <h2 class="text-center">Fill in the details to get recommendations</h2>
+        <form method="post" action="/pred">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender" title="User's Gender">Gender:</label>
+                        <select class="form-control" id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="part_time_job" title="Whether the user has a part-time job or not">Part-Time
+                            Job:</label>
+                        <select class="form-control" id="part_time_job" name="part_time_job">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="weekly_self_study_hours"
+                            title="Number of hours the user dedicates to self-study per week">&#9432; Weekly Self-Study
+                            Hours:</label>
+                        <input type="number" class="form-control" id="weekly_self_study_hours"
+                            name="weekly_self_study_hours">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="education_level" title="Highest level of education completed by the user">&#9432;
+                            Education Level:</label>
+                        <select class="form-control" id="education_level" name="education_level">
+                            <option value="0">Bachelor's Degree</option>
+                            <option value="1">Master's Degree</option>
+                            <option value="2">Associate's Degree</option>
+                            <option value="3">Doctor of Law</option>
+                            <option value="4">Doctor of Medicine</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="interest_areas"
+                            title="Areas of interest for the user (e.g., Web Development, UI/UX Design)">&#9432;
+                            Interest Areas:</label>
+                        <select class="form-control" id="interest_areas" name="interest_areas" multiple>
+                            <option value="0">
+                                Web Development
+                            </option>
+                            <option value="0">
+                                UI/UX Design
+                            </option>
+                            <option value="1">
+                                Mobile App Development</option>
+                            <option value="1">
+                                Game Development</option>
+                            <option value="2">
+                                Data Science</option>
+                            <option value="2">
+                                Machine Learning
+                            </option>
+                            <option value="2">
+                                ArtificialIntelligence
+                            </option>
+                            <option value="3">
+                                Cybersecurity
+                            </option>
+                            <option value="3">
+                                Cloud Computing
+                            </option>
+                            <option value="4">
+                                Database Management
+                            </option>
+                            <option value="4">
+                                Software Development
+                            </option>
+                            <option value="5">
+                                Robotics
+                            </option>
+                            <option value="5">
+                                Automation
+                            </option>
+                            <option value="5">
+                                IoT
+                            </option>
+                            <option value="6">
+                                Software Testing
+                            </option>
+                            <option value="6">
+                                QA
+                            </option>
+                            <option value="7">
+                                Business Systems Analysis
+                            </option>
+                            <option value="7">
+                                Product Management
+                            </option>
+                            <option value="8">
+                                User Experience Design
+                            </option>
+                            <option value="8">
+                                User Interface Design
+                            </option>
+                            <option value="9">
+                                Technical Writing
+                            </option>
+                            <option value="9">
+                                Software Architecture
+                            </option>
+                        </select>
+                        <small class="text-muted">Çoklu seçim yapmak için <strong>CTRL</strong> tuşuna basılı tutarak
+                            seçim yapabilirsiniz
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="skills" title="Skills possessed by the user (e.g., JavaScript, Python)">&#9432;
+                            Skills:</label>
+                        <select class="form-control" id="skills" name="skills" multiple>
+                            <option value="0">
+                                HTML
+                            </option>
+                            <option value="0">
+                                CSS
+                            </option>
+                            <option value="0">
+                                JavaScript
+                            </option>
+                            <option value="0">
+                                UI Frameworks
+                            </option>
+                            <option value="1">
+                                Java
+                            </option>
+                            <option value="1">
+                                Android SDK
+                            </option>
+                            <option value="1">
+                                iOS SDK
+                            </option>
+                            <option value="1">
+                                Game Engines
+                            </option>
+                            <option value="2">
+                                Python
+                            </option>
+                            <option value="2">
+                                R
+                            </option>
+                            <option value="2">
+                                TensorFlow
+                            </option>
+                            <option value="2">
+                                PyTorch
+                            </option>
+                            <option value="2">
+                                Machine Learning
+                            </option>
+                            <option value="3">
+                                Cybersecurity Tools
+                            </option>
+                            <option value="3">
+                                Cloud Platforms
+                            </option>
+                            <option value="4">
+                                SQL
+                            </option>
+                            <option value="4">
+                                Databases
+                            </option>
+                            <option value="5">
+                                Robotics Automation
+                            </option>
+                            <option value="5">
+                                IoT Platforms
+                            </option>
+                            <option value="6">
+                                Software Testing Tools
+                            </option>
+                            <option value="6">
+                                QA Frameworks
+                            </option>
+                            <option value="7">
+                                Business Systems Analysis
+                            </option>
+                            <option value="7">
+                                Product Management Tools
+                            </option>
+                            <option value="8">
+                                UX/UI Design Tools
+                            </option>
+                            <option value="8">
+                                Prototyping Tools
+                            </option>
+                            <option value="9">
+                                Technical Writing Tools
+                            </option>
+                            <option value="9">
+                                Software Documentation Tools</option>
+                        </select>
+                        <small class="text-muted">Çoklu seçim yapmak için <strong>CTRL</strong> tuşuna basılı tutarak
+                            seçim yapabilirsiniz</small>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="career_goals" title="User's career objectives and future plans">&#9432; Career
+                            Goals:</label>
+                        <select class="form-control" id="career_goals" name="career_goals" multiple>
+                            <option value="0">Freelance</option>
+                            <option value="1">Startup</option>
+                            <option value="2">Research Scientist</option>
+                            <option value="3">Security Engineer</option>
+                            <option value="4">Database Architect</option>
+                            <option value="5">Robotics Engineer</option>
+                            <option value="6">QA Automation Engineer</option>
+                            <option value="7">Business Analyst</option>
+                            <option value="8">UX/UI Lead</option>
+                            <option value="9">Technical Writer</option>
+                            <option value="10">Mobile App Developer</option>
+                            <option value="11">Product Manager</option>
+                            <option value="12">Data Scientist (Healthcare)</option>
+                            <option value="13">UI/UX Designer</option>
+                            <option value="14">Software Engineer (Backend)</option>
+                            <option value="15">Game Developer</option>
+                            <option value="16">Front-End Developer</option>
+                            <option value="17">Automation Engineer</option>
+                            <option value="18">Cloud Security Architect</option>
+                            <option value="19">Software Development Engineer in Test (SDET)</option>
+                            <option value="20">Full Stack Developer</option>
+                            <option value="21">Data Analyst</option>
+                            <option value="22">Mobile Game Developer</option>
+                            <option value="23">Software Tester</option>
+                            <option value="24">Web Developer</option>
+                            <option value="25">Business Systems Analyst</option>
+                            <option value="26">Interaction Designer</option>
+                            <option value="27">Penetration Tester</option>
+                            <option value="28">Software Architect</option>
+                            <option value="29">AI Engineer</option>
+                            <option value="30">Front-End Developer (React)</option>
+                            <option value="31">QA Lead</option>
+                            <option value="32">Business Systems Analyst (Project Management)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="experience" title="Years of experience in the chosen field">&#9432; Experience
+                            (years):</label>
+                        <select class="form-control" id="experience" name="experience">
+                            <option value="0">0 Year</option>
+                            <option value="1">1 Year</option>
+                            <option value="2">2 Years</option>
+                            <option value="3">3 Years</option>
+                            <option value="4">4 Years</option>
+                            <option value="5">5 Years</option>
+                            <option value="6">6 Years</option>
+                            <option value="7">7 Years</option>
+                            <option value="8">8 Years</option>
+                            <option value="9">9 Years</option>
+                            <option value="10+">10+ Years</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
