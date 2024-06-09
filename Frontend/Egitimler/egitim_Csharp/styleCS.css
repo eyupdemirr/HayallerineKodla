@@ -10,6 +10,7 @@
     --fourth-color: #581474;
     --dark-color: rgb(66, 61, 61);
     --bright-color: #dddddd;
+    --new-color: rgb(230, 208, 11);
 }
 
 body {
@@ -19,13 +20,14 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    background-color: var(--fourth-color);
+    background-color: var(--new-color);
     display: flex;
 }
 
 .menu,
 .ekranEgitim,
 .ekranAlistirma {
+    color: var(--secondary-color-color);
     border: 1px solid black;
 }
 
@@ -70,7 +72,7 @@ body {
     border: 1px solid var(--bright-color);
     border-radius: 4px;
     text-decoration: none;
-    color: var(--bright-color);
+    color: var(--secondary-color-color);
     box-shadow: 0 0 5px var(--secondary-color);
     transition: box-shadow 0.2s ease;
 }

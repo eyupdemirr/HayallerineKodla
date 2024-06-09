@@ -90,7 +90,65 @@
             </div>
 
         </div>
-        <div class="ekranAlistirma">Alıştırma Ekranı</div>
+        <div class="ekranAlistirma">
+            <style>
+                .exercise {
+                    background-color: #f0f0f0;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+
+                .answer {
+                    margin-top: 20px;
+                }
+
+                textarea {
+                    width: 100%;
+                    padding: 10px;
+                    margin-top: 5px;
+                }
+
+                button {
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    background-color: #0056b3;
+                }
+            </style>
+            <h2>C# Alıştırması</h2>
+            <p>Merhaba! Aşağıdaki kodu inceleyerek, ekrana "Hello World" yazdıracak olan C# kodunu yazınız:</p>
+            <div class="answer">
+                <label for="userInput">Kodunuzu buraya yazınız:</label>
+                <textarea id="userInput" rows="2" style="resize: vertical;"></textarea>
+                <button onclick="checkAnswer()">Kontrol Et</button>
+                <button id="toggleExercise">Cevabı Göster</button>
+                <br><br>
+                <p id="result"></p>
+            </div>
+            <div class="exercise" style="display: none;">
+                <p>Yapılması gereken:</p>
+                <p>Console.WriteLine("Hello World");</p>
+            </div>
+            <script>
+                document.getElementById('toggleExercise').addEventListener('click', function () {
+                    var exercise = document.querySelector('.exercise');
+                    if (exercise.style.display === 'none') {
+                        exercise.style.display = 'block';
+                        document.getElementById('toggleExercise').textContent = "Cevabı Gizle";
+                    } else {
+                        exercise.style.display = 'none';
+                        document.getElementById('toggleExercise').textContent = "Cevabı Göster";
+                    }
+                });
+            </script>
+        </div>
     </div>
     <script src="appCS.js"></script>
 </body>
