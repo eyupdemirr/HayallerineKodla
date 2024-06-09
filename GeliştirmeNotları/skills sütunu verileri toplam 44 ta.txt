@@ -1,0 +1,46 @@
+skills sütunu verileri toplam 44 tane
+
+HTML
+CSS
+JavaScript
+Pandas
+NumPy
+Matplotlib
+Scikit-learn
+TensorFlow
+BeautifulSoup
+HTTP Requests
+Tkinter
+PyQt
+Selenium
+PyAutoGUI
+Pygame
+Python
+Chart.js
+Anime.js
+Spring
+AndroidSDK
+Java
+Python
+C#
+JavaScript
+PHP
+Ruby
+Core Data
+Swift
+Kotlin
+Flutter
+IoT
+Dart
+Provider
+Riverpod
+Bloc
+SQL
+Redux
+Webpack
+Git
+Docker
+Heroku
+AWS
+Azure
+Google Cloud Platform
