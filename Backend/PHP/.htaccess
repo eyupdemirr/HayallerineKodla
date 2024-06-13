@@ -1,5 +1,0 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    Order Allow,Deny
-    Allow from all
-</IfModule>
