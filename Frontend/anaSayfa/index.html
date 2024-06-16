@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="tr-TR">
-<!-- Basic -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Mobile Metas -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- Site Metas -->
-<title>HayallerineKodla</title>
-<meta name="description" content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
-<meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
-<meta name="author" content="EyüpDEMİR">
-<!-- site icon -->
-<link rel="icon" href="images/fevicon.png" type="image/png" />
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<!-- Custom animate styles for this template -->
-<link href="css/animate.css" rel="stylesheet">
-<!-- Custom styles for this template -->
-<link href="style.css" rel="stylesheet">
-<!-- Responsive styles for this template -->
-<link href="css/responsive.css" rel="stylesheet">
-<!-- Colors for this template -->
-<link href="css/colors.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>HayallerineKodla</title>
+   <meta name="description"
+      content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
+   <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
+   <meta name="author" content="EyüpDEMİR">
+   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="css/animate.css" rel="stylesheet">
+   <link href="style.css" rel="stylesheet">
+   <link href="css/responsive.css" rel="stylesheet">
+   <link href="css/colors.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <style>
    .nav-item.dropdown:hover .dropdown-menu {
@@ -39,10 +32,8 @@
    }
 
    .dropdown-menu {
-      width: 200px;
-      /* Dropdown menüsünün genişliğini belirleyin */
+      width: 50px;
       overflow: hidden;
-      /* İçeriğin taşmasını engelleyin */
    }
 </style>
 
@@ -80,6 +71,24 @@
                                        Benlik?</a>
                                  </div>
                               </li>
+                              <li class="nav-item dropdown">
+                                 <a class="nav-link dropdown-toggle color-aqua-hover" id="navbarDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    data-key="educates">
+                                    Eğitimler
+                                 </a>
+                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item"
+                                       href="/Frontend/Egitimler/egitim_HTML/1_HTML_Nedir.html">HTML</a>
+                                    <a class="dropdown-item"
+                                       href="/Frontend/Egitimler/egitim_JS/1_JavaScript_Nedir.html">JavaScript</a>
+                                    <a class="dropdown-item"
+                                       href="/Frontend/Egitimler/egitim_Python/1_Python_Nedir.html">Python</a>
+                                    <a class="dropdown-item"
+                                       href="/Frontend/Egitimler/egitim_Csharp/1_csharpNedir.html">C#</a>
+                                    <a class="dropdown-item" href="/Frontend/Egitimler/egitim_SQL/SQL.html">SQL</a>
+                                 </div>
+                              </li>
                               <li class="nav-item">
                                  <a class="nav-link color-grey-hover" href="#contact" data-key="contact">İletişim</a>
                               </li>
@@ -96,7 +105,7 @@
                                  </div>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link color-grey-hover" href="/Frontend/login.html">Login</a>
+                                 <a class="nav-link color-grey-hover" href="/Frontend/anaSayfa/login.html">Login</a>
                               </li>
                            </ul>
                         </div>
@@ -134,9 +143,7 @@
          </div>
       </div>
    </section>
-   <!-- end section -->
 
-   <!-- about section -->
    <section class="layout_padding section about_dottat" id="hakkimizda">
       <div class="container">
          <div class="row">
@@ -270,6 +277,7 @@
                            <li><a href="/Frontend/Egitimler/egitim_SQL/cssSQL.html">SQL</a></li>
                            <li><a href="/Frontend/Egitimler/egitim_HTML/1_HTML_Nedir.html">HTML5</a></li>
                            <li><a href="/Frontend/Egitimler/egitim_JS/1_JavaScript_Nedir.html">JavaScript</a></li>
+                           <li><a href="/Frontend/Egitimler/egitim_Python/1_Python_Nedir.html">Python</a></li>
                         </ul>
                      </div>
                   </div>
@@ -294,6 +302,8 @@
                      </div>
                      <div class="footer_menu">
                         <ul>
+                           <li><a href="#" data-key="login">Login</a></li>
+                           <li><a href="#" data-key="signUp">Sign UP</a></li>
                            <li><a href="#" data-key="faqs">FAQs</a></li>
                            <li><a href="#" data-key="privacyPolicy">Privacy policy</a></li>
                         </ul>
@@ -317,11 +327,11 @@
    <script>
       let translations;
 
+      //Dinamik Dil Seçimi
       function setLanguage(lang) {
          localStorage.setItem('language', lang);
          loadTranslations(lang);
 
-         // Dil seçimi yapılmışsa aktif sınıfını güncelle
          document.querySelectorAll('.dropdown-item').forEach(item => {
             item.classList.remove('active');
          });
@@ -337,7 +347,6 @@
             }
          });
 
-         // Input ve button öğelerinin placeholder ve textlerini güncelleyin
          const emailInput = document.querySelector('input[name="email"]');
          if (emailInput) {
             emailInput.placeholder = translations['emailPlaceholder'];
@@ -354,7 +363,7 @@
             .then(response => response.json())
             .then(data => {
                translations = data;
-               updateTexts(); // Metinler yüklendikten sonra metinleri güncelle
+               updateTexts();
             });
       }
 
@@ -362,7 +371,6 @@
          const language = localStorage.getItem('language') || 'tr';
          loadTranslations(language);
 
-         // Dil seçimi yapılmışsa aktif sınıfını ekle
          document.getElementById('lang-' + language).classList.add('active');
       });
    </script>

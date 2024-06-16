@@ -5,10 +5,8 @@ import os
 
 app = Flask(__name__)
 
-# Define the directory where your scaler and model files are stored
 MODEL_DIR = os.path.dirname(__file__)
 
-# Load the scaler, model, and class names
 scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
 model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 class_names = [
@@ -24,28 +22,22 @@ class_names = [
     'Database Developer', 'Machine Learning Engineer', 'Security Tester'
 ]
 
-# Recommendation System
+# main Function
 def Recommendations(gender, part_time_job, weekly_self_study_hours, interest_areas, skills, education_level, experience, career_goals):
-    # Encode categorical variables
     gender_encoded = 1 if gender.lower() == 'female' else 0
     part_time_job_encoded = 1 if part_time_job else 0
 
-    # Create feature array
     feature_array = np.array([[gender_encoded, part_time_job_encoded, weekly_self_study_hours, interest_areas, skills, education_level, experience, career_goals]])
 
-    # Scale features
     scaled_features = scaler.transform(feature_array)
 
-    # Predict using the model
     probabilities = model.predict_proba(scaled_features)
 
-    # Get top five predicted classes along with their probabilities
     top_classes_idx = np.argsort(-probabilities[0])[:5]
     top_classes_names_probs = [(class_names[idx], probabilities[0][idx]) for idx in top_classes_idx]
 
     return top_classes_names_probs
 
-# Routes
 @app.route('/')
 def home():
     return render_template('home.html')

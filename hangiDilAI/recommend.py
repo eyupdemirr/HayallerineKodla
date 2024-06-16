@@ -1,3 +1,6 @@
+#pip install imblearn
+#pip install xgboost
+
 """ 1. Import Libraries and Load Data """
 import pandas as pd
 from sklearn.calibration import LabelEncoder
@@ -5,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 
 #Load CSV data 
-df1 = pd.read_csv("hangiDilAI\\student-scores.csv")
+df1 = pd.read_csv("hangiDilAI\\userInfo_Lang.csv")
 df = df1.copy()
 df.head()
 
@@ -282,8 +285,7 @@ career_goals_map = {
     'Google Cloud Platform': 32
 }
 
-
-# Apply mapping to the DataFrame
+# map defines to the DataFrame
 df['gender'] = df['gender'].map(gender_map)
 df['programming_stack'] = df['programming_stack'].map(programming_stack)
 df['skills'] = df['skills'].map(skills_map)
@@ -291,41 +293,32 @@ df['experience'] = df['experience'].map(experience_map)
 df['career_goals'] = df['career_goals'].map(career_goals_map)
 
 df.head()
-
-""" Dataset Hakkında Genel Bilgiler"""
 df.info()
 
-
 """ 4. Preprocessing - Handling Imbalanced Dataset """
-#pip install imblearn
 import pandas as pd
 from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import LabelEncoder
 
-# "programming_stack" boş değerleri sil
+# Delete empty datas on "programming_stack" column
 df_cleaned = df.dropna(subset=['skills','career_goals'])
 df.info()
 
-# Sınıf dengesizliğini kontrol etme
 print(df_cleaned['programming_stack'].unique())
 print(df_cleaned['programming_stack'].value_counts())
 
-# (Opsiyonel) SMOTE ile aşırı örnekleme
-# Label encoder oluşturma
+# Create Label Encoder
 encoder = LabelEncoder()
-
-# "programming_stack" sütununu kodlama
 df_cleaned['programming_stack'] = encoder.fit_transform(df_cleaned['programming_stack'])
 
-# Özellikleri ve hedef değişkeni ayırma
 X = df_cleaned.drop('programming_stack', axis=1)
 y = df_cleaned['programming_stack']
 
-# SMOTE uygula (isteğe bağlı)
-# SMOTE nesnesi oluşturma
+
+# Create SMOTE
 smote = SMOTE(random_state=42)
 
-# SMOTE ile aşırı örnekleme
+# Oversampling with SMOTE
 if True:
     X_resampled, y_resampled = smote.fit_resample(X, y)
 else:
@@ -345,7 +338,6 @@ from sklearn.preprocessing import StandardScaler
 # Initialize the StandardScaler
 scaler = StandardScaler()
 
-# Fit the scaler to the training data and transform both training and testing data
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
@@ -353,16 +345,9 @@ X_train_scaled.shape
 
 
 """Models Training (Multiple Models)"""
-
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import AdaBoostClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-#pip install xgboost
 from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import warnings
@@ -371,18 +356,15 @@ warnings.filterwarnings("ignore")
 # Define models
 models = {
   "Logistic Regression": LogisticRegression(),
-  # ... (other models omitted for brevity)
   "XGBoost Classifier": XGBClassifier(use_label_encoder=False, eval_metric='mlogloss')
 }
 
-# Train and evaluate each model
+# Train Model
 for name, model in models.items():
   print("="*50)
   print("Model:", name)
   # Train the model
   model.fit(X_train_scaled, y_train)
-
-  # Predict on test set
   y_pred = model.predict(X_test_scaled)
 
   # Calculate metrics
@@ -390,79 +372,53 @@ for name, model in models.items():
   classification_rep = classification_report(y_test, y_pred)
   conf_matrix = confusion_matrix(y_test, y_pred)
 
-  # Print metrics
   print("Accuracy:", accuracy)
   print("Classification Report:\n", classification_rep)
   print("Confusion Matrix:\n", conf_matrix)
 
 
 """Model Selection (Random Forest)"""
-
 model = RandomForestClassifier()
 
 model.fit(X_train_scaled, y_train)
-
-# Predict on test set
 y_pred = model.predict(X_test_scaled)
 
-# Calculate metrics
 print("Accuracy: ",accuracy_score(y_test, y_pred))
 print("Report: ",classification_report(y_test, y_pred))
 print("Confusion Matrix: ",confusion_matrix(y_test, y_pred))
 
 
 """ Single Input Predictions """
-# test 1
 print("Actual Label :", y_test.iloc[10])
 print("Model Prediction :",model.predict(X_test_scaled[10].reshape(1,-1))[0])
 if y_test.iloc[10]==model.predict(X_test_scaled[10].reshape(1,-1)):
-    print("Wow! Model doing well.....")
+    print("The Model Working True")
 else:
-    print("not sure......")
-    
-# test 2
-print("Actual Label :", y_test.iloc[300])
-print("Model Prediction :",model.predict(X_test_scaled[300].reshape(1,-1))[0])
-if y_test.iloc[10]==model.predict(X_test_scaled[10].reshape(1,-1)):
-    print("Wow! Model doing well.....")
-else:
-    print("not sure......")
-
-# test 3
-print("Actual Label :", y_test.iloc[23])
-print("Model Prediction :",model.predict(X_test_scaled[23].reshape(1,-1))[0])
-if y_test.iloc[10]==model.predict(X_test_scaled[10].reshape(1,-1)):
-    print("Wow! Model doing well.....")
-else:
-    print("not sure......")
+    print("Need Optimization!")
 
 
 """ Saving & Load Files """
 import os
 import pickle
 
-# Define the directory path for model files
 MODEL_DIR = os.path.dirname(__file__)
 
-# SAVE FILES
+# Save Files
 pickle.dump(scaler, open(os.path.join(MODEL_DIR, "scaler.pkl"), 'wb'))
 pickle.dump(model, open(os.path.join(MODEL_DIR, "model.pkl"), 'wb'))
 
-# Load the scaler, label encoder, and model
+# Load Files
 scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
 model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 
 
 """ Recommendation System """
-#Recommendation System
 import os
 import pickle
 import numpy as np
 
-# Define the directory path for model files
 MODEL_DIR = os.path.dirname(__file__)
 
-# Load the scaler, label encoder, model, and class names
 scaler = pickle.load(open(os.path.join(MODEL_DIR, "scaler.pkl"), 'rb'))
 model = pickle.load(open(os.path.join(MODEL_DIR, "model.pkl"), 'rb'))
 class_names = [
@@ -487,18 +443,14 @@ class_names = [
     'Google Cloud Storage', 'BigQuery', 'Cloud Pub/Sub', 'Firestore'
     ]
 
+# main Function
 def Recommendations(gender, programming_stack, skills, experience, career_goals):
 
-    # Encode categorical variables
+    # Encode string variables to numeric
     gender_encoded = 1 if gender.lower() == 'female' else 0
-
-    # Create feature array
+   
     feature_array = np.array([[gender_encoded, skills, experience, career_goals]])
-
-    # Scale features
     scaled_features = scaler.transform(feature_array)
-
-    # Predict using the model
     probabilities = model.predict_proba(scaled_features)
 
     # Get top five predicted classes along with their probabilities
@@ -517,7 +469,7 @@ final_recommendations = Recommendations(
     career_goals=0
 )
 
-print(" Top recommended career paths with probabilities:"+ "\n" +("=")*50)
+print("Top Recommended Software Language:"+ "\n" +("=")*50)
 
 for class_name, probability in final_recommendations:
     print(f"{class_name} with probability {probability}")

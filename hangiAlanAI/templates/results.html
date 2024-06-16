@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
+    <title>Results of Which Sector is For Me?</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/Frontend/anaSayfa/index.html">HayallerineKodla</a>
+            <a class="navbar-brand" href="/Frontend/anaSayfa/index.html">Code your Dreams</a>
         </div>
     </nav>
     <div class="container mt-5">
-        <h1>Top Recommended Careers with Probabilities</h1>
+        <h1>Top Recommended Sector</h1>
         <ul class="list-group mt-3">
             {% for recommendation in recommendations %}
             <li class="list-group-item">{{ recommendation[0] }} with probability {{ recommendation[1] | round(2) }}</li>
