@@ -89,41 +89,23 @@
     <div class="container">
         <div class="box">
             <div class="header">
-                <a href="/Frontend/anaSayfa/login.html" id="giris-yap">Giriş Yap</a>
-                <a href="#kayit-ol-icerik" id="kayit-ol" class="active">Kayıt Ol</a>
+                <a href="#giris-yap-icerik" id="giris-yap" class="active">Giriş Yap</a>
+                <a href="/Frontend/anaSayfa/signUp.html" id="kayit-ol">Kayıt Ol</a>
             </div>
             <div class="content">
-                <div id="kayit-ol-icerik">
-                    <form id="signUp" action="#" method="POST">
-                        <label for="first_name">Adınız:</label>
-                        <input type="text" id="first_name" name="first_name" required autocomplete="given-name">
-                        <br>
-
-                        <label for="last_name">Soyadınız:</label>
-                        <input type="text" id="last_name" name="last_name" required autocomplete="family-name">
-                        <br>
-
-                        <label for="user_name">Kullanıcı Adı:</label>
-                        <input type="text" id="user_name" name="user_name" required autocomplete="username">
-                        <br>
-
-                        <label for="password">Şifre:</label>
-                        <input type="password" id="password" name="password" required autocomplete="current-password">
-                        <br>
-
-                        <label for="birth_datetime">Doğum Tarihi:</label>
-                        <input type="date" id="birth_datetime" name="birth_datetime" required autocomplete="bday">
-                        <br>
-
-                        <!-- Formu göndermek için bir buton -->
-                        <button type="submit">Kayıt Ol</button>
+                <div id="giris-yap-icerik">
+                    <form action="{{ url_for('anaSayfa.login') }}" method="post">
+                        <label for="username">Kullanıcı Adı:</label><br>
+                        <input type="text" id="username" name="username" required><br>
+                        <label for="password">Şifre:</label><br>
+                        <input type="password" id="password" name="password" required><br><br>
+                        <input type="submit" value="Giriş Yap">
                     </form>
+                    <p>Henüz üye değil misiniz? <a href="{{ url_for('anaSayfa.signup') }}">Kayıt Ol</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="/Backend/JavaScript/db_connect.js"></script>
 </body>
-
 
 </html>

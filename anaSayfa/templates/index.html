@@ -10,11 +10,11 @@
       content="Yazılım Dünyasında Herkes İçin Geliştirilen Ücretsiz Eğitim ve Alıştırma Platformu">
    <meta name="keywords" content="Hayallerine, Kodla, Eğitim, Kodlama, Yazılım, ">
    <meta name="author" content="EyüpDEMİR">
-   <link href="css/bootstrap.css" rel="stylesheet">
-   <link href="css/animate.css" rel="stylesheet">
-   <link href="style.css" rel="stylesheet">
-   <link href="css/responsive.css" rel="stylesheet">
-   <link href="css/colors.css" rel="stylesheet">
+   <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='css/colors.css') }}" rel="stylesheet">
+   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -53,7 +53,7 @@
                         <div class="collapse navbar-collapse justify-content-md-center" id="cloapediamenu">
                            <ul class="navbar-nav">
                               <li class="nav-item active">
-                                 <a class="nav-link" href="index.html" data-key="home">Anasayfa</a>
+                                 <a class="nav-link" href="/" data-key="home">Anasayfa</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link color-aqua-hover" href="#hakkimizda" data-key="about">Hakkımızda</a>
@@ -62,12 +62,12 @@
                                  <a class="nav-link dropdown-toggle color-aqua-hover" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                     data-key="recommendations">
-                                    Tavsiyeler <i class="fas fa-caret-down"></i>
+                                    Tavsiyeler
                                  </a>
                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/hangiSektörBenlik/templates/home.html">Hangi Sektör
+                                    <a class="dropdown-item" href="{{ url_for('hangiAlanAI.home') }}">Hangi Sektör
                                        Benlik?</a>
-                                    <a class="dropdown-item" href="/hangiDilBenlik/templates/home.html">Hangi Dil
+                                    <a class="dropdown-item" href="{{ url_for('hangiDilAI.home') }}">Hangi Dil
                                        Benlik?</a>
                                  </div>
                               </li>
@@ -78,15 +78,13 @@
                                     Eğitimler
                                  </a>
                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Egitimler/egitim_HTML/1_HTML_Nedir.html">HTML</a>
                                     <a class="dropdown-item"
-                                       href="/Frontend/Egitimler/egitim_HTML/1_HTML_Nedir.html">HTML</a>
+                                       href="/Egitimler/egitim_JS/1_JavaScript_Nedir.html">JavaScript</a>
                                     <a class="dropdown-item"
-                                       href="/Frontend/Egitimler/egitim_JS/1_JavaScript_Nedir.html">JavaScript</a>
-                                    <a class="dropdown-item"
-                                       href="/Frontend/Egitimler/egitim_Python/1_Python_Nedir.html">Python</a>
-                                    <a class="dropdown-item"
-                                       href="/Frontend/Egitimler/egitim_Csharp/1_csharpNedir.html">C#</a>
-                                    <a class="dropdown-item" href="/Frontend/Egitimler/egitim_SQL/SQL.html">SQL</a>
+                                       href="/Egitimler/egitim_Python/1_Python_Nedir.html">Python</a>
+                                    <a class="dropdown-item" href="/Egitimler/egitim_Csharp/1_csharpNedir.html">C#</a>
+                                    <a class="dropdown-item" href="/Egitimler/egitim_SQL/SQL.html">SQL</a>
                                  </div>
                               </li>
                               <li class="nav-item">
@@ -105,7 +103,7 @@
                                  </div>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link color-grey-hover" href="/Frontend/anaSayfa/login.html">Login</a>
+                                 <a class="nav-link color-grey-hover" href="{{ url_for('anaSayfa.login') }}">Login</a>
                               </li>
                            </ul>
                         </div>
@@ -128,7 +126,7 @@
          <div class="row">
             <div class="full">
                <div class="slider_banner">
-                  <img class="img-responsive" src="images/slider_img.png" alt="#" />
+                  <img class="img-responsive" src="{{ url_for('static', filename='images/slider_img.png') }}" alt="#" />
                   <div class="slide_cont">
                      <div class="slider_cont_inner">
                         <h3 data-key="bannerTitle">Hayallerine Kodla</h3>
@@ -164,9 +162,10 @@
             </div>
             <div class="col-md-12">
                <div class="about_img margin_top_30  text_align_center">
-                  <a href="/hangiAlanAI/templates/home.html" class="btn btn-primary" data-key="findYourSector">Hangi
+                  <a href="{{ url_for('hangiAlanAI.home') }}" class="btn btn-primary" data-key="findYourSector">Hangi
                      Sektör Benlik?</a>
-                  <a href="/hangiDilAI/templates/home.html" class="btn btn-primary" data-key="findYourPath">Yol Haritamı
+                  <a href="{{ url_for('hangiDilAI.home') }}" class="btn btn-primary" data-key="findYourPath">Yol
+                     Haritamı
                      Bul</a>
                </div>
             </div>
@@ -193,7 +192,7 @@
 
             <div class="col-md-4 text_align_center">
                <div class="cours">
-                  <img class="img-responsive" src="images/cour3.png" alt="#" />
+                  <img class="img-responsive" src="{{ url_for('static', filename='images/cour3.png') }}" alt="#" />
                </div>
                <h3 data-key="assistantSupport">Asistan Desteği Al</h3>
                <p data-key="assistantSupportText">HayallerineKodla Asistanı ile geçmiş deneyim ve tecrübelerin üzerine
@@ -204,7 +203,7 @@
 
             <div class="col-md-4 text_align_center">
                <div class="cours">
-                  <img class="img-responsive" src="images/cour1.png" alt="#" />
+                  <img class="img-responsive" src="{{ url_for('static', filename='images/cour1.png') }}" alt="#" />
                </div>
                <h3 data-key="learn">Öğren</h3>
                <p data-key="learnText">Yol Haritandaki her adım için HayallerineKodla Web sayfasında eğitimler
@@ -215,7 +214,7 @@
 
             <div class="col-md-4 text_align_center">
                <div class="cours">
-                  <img class="img-responsive" src="images/cour2.png" alt="#" />
+                  <img class="img-responsive" src="{{ url_for('static', filename='images/cour2.png') }}" alt="#" />
                </div>
                <h3 data-key="practice">Pratik Yap</h3>
                <p data-key="practiceText">Öğrendiklerini kalıcı hale getirmek için her zaman pratik yapmak önemlidir.
@@ -359,7 +358,7 @@
       }
 
       function loadTranslations(lang) {
-         fetch(`${lang}.json`)
+         fetch(`/anaSayfa/static/${lang}.json`)
             .then(response => response.json())
             .then(data => {
                translations = data;

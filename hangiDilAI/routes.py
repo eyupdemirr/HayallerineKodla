@@ -67,7 +67,3 @@ def pred():
 
         return render_template('resultsLang.html', recommendations=recommendations)
     return render_template('homeLang.html')
-
-
-if __name__ == '__main__':
-    hangiDilAI_bp.run(debug=True)

@@ -64,7 +64,3 @@ def pred():
 
         return render_template('results.html', recommendations=recommendations)
     return render_template('home.html')
-
-
-if __name__ == '__main__':
-    hangiAlanAI_bp.run(debug=True)
