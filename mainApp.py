@@ -3,7 +3,7 @@ from anaSayfa.routes import anaSayfa_bp
 from hangiAlanAI.routes import hangiAlanAI_bp
 from hangiDilAI.routes import hangiDilAI_bp
 
-app = Flask(__name__, template_folder='anaSayfa/templates', static_folder='anaSayfa/static')
+app = Flask(__name__, template_folder='anaSayfa/templates', static_folder='anaSayfa/static', static_url_path='/anaSayfa/static')
 app.secret_key = 'supersecretkey'
 
 # Blueprint'leri kaydet
