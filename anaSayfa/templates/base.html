@@ -1,10 +1,15 @@
+<!-- base.html -->
+
 <!DOCTYPE html>
-<html lang="tr-TR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş/Kayıt Sayfası</title>
+    <title>{% block title %}Ana Sayfa{% endblock %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -54,7 +59,7 @@
             border-radius: 5px;
         }
 
-        a.active {
+        .header a.active {
             background-color: var(--secondary-color);
             color: #fff;
         }
@@ -86,33 +91,19 @@
 </head>
 
 <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
     <div class="container">
-        <div class="box">
-            <div class="header">
-                <a href="{{ url_for('anaSayfa.login') }}" id="giris-yap">Giriş Yap</a>
-                <a href="{{ url_for('anaSayfa.signup') }}" id="kayit-ol" class="active">Kayıt Ol</a>
-            </div>
-            <div class="content">
-                <div id="kayit-ol-icerik">
-                    <form action="{{ url_for('anaSayfa.signup') }}" method="post">
-                        <label for="name">İsim:</label><br>
-                        <input type="text" id="name" name="name" required><br>
-                        <label for="surname">Soyisim:</label><br>
-                        <input type="text" id="surname" name="surname" required><br>
-                        <label for="username">Kullanıcı Adı:</label><br>
-                        <input type="text" id="username" name="username" required><br>
-                        <label for="password">Şifre:</label><br>
-                        <input type="password" id="password" name="password" required><br>
-                        <label for="birthdate">Doğum Tarihi (YYYY-MM-DD):</label><br>
-                        <input type="text" id="birthdate" name="birthdate" required><br><br>
-                        <input type="submit" value="Kayıt Ol">
-                    </form>
-                    <p>Zaten bir hesabınız var mı? <a href="{{ url_for('anaSayfa.login') }}">Giriş Yap</a></p>
-                </div>
-            </div>
+        <div class="alert alert-{{ category }}">
+            {{ message }}
         </div>
     </div>
-</body>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
+    {% block content %}{% endblock %}
+</body>
 
 </html>

@@ -4,5 +4,41 @@
         "surname": "bir",
         "password": "12345",
         "birthdate": "1111-11-11"
+    },
+    "deniki": {
+        "name": "deneme",
+        "surname": "iki",
+        "password": "12345",
+        "birthdate": "2222-12-22"
+    },
+    "denuc": {
+        "name": "deneme",
+        "surname": "denuc",
+        "password": "12345",
+        "birthdate": "3333-12-31"
+    },
+    "dendort": {
+        "name": "deneme",
+        "surname": "d\u00f6rt",
+        "password": "12345",
+        "birthdate": "1111-11-11"
+    },
+    "denbes": {
+        "name": "deneme",
+        "surname": "bes",
+        "password": "12345",
+        "birthdate": "1111-11-11"
+    },
+    "denalti": {
+        "name": "deneme",
+        "surname": "alti",
+        "password": "12345",
+        "birthdate": "1111-11-11"
+    },
+    "denyedi": {
+        "name": "deneme",
+        "surname": "yedi",
+        "password": "12345",
+        "birthdate": "1111-11-11"
     }
 }

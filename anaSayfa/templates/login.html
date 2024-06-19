@@ -54,7 +54,7 @@
             border-radius: 5px;
         }
 
-        .header a.active {
+        a.active {
             background-color: var(--secondary-color);
             color: #fff;
         }
@@ -89,8 +89,8 @@
     <div class="container">
         <div class="box">
             <div class="header">
-                <a href="#giris-yap-icerik" id="giris-yap" class="active">Giriş Yap</a>
-                <a href="/Frontend/anaSayfa/signUp.html" id="kayit-ol">Kayıt Ol</a>
+                <a href="{{ url_for('anaSayfa.login') }}" id="giris-yap" class="active">Giriş Yap</a>
+                <a href="{{ url_for('anaSayfa.signup') }}" id="kayit-ol">Kayıt Ol</a>
             </div>
             <div class="content">
                 <div id="giris-yap-icerik">
@@ -106,6 +106,15 @@
             </div>
         </div>
     </div>
+    <script>
+        // Session'dan kullanıcı adını al
+        const loggedInUser = '{{ session["username"] }}'; // Flask template motoru ile alıyoruz
+
+        // Kullanıcı girişi yapmışsa ve kullanıcı adı varsa popup'ı göster
+        if (loggedInUser) {
+            window.alert(`Hoşgeldiniz, ${loggedInUser}!`);
+        }
+    </script>
 </body>
 
 </html>
